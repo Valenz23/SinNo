@@ -43,3 +43,11 @@ La estructura es la siguiente:
 - **Sumario**: tiene que ser breve y tratar de ser un titulo para la actualización del código
 - **Descripción**: aqui ya nos podemos explayar más, indicando por encima los cambios y las nuevas funcionalidades de nuestro código.
 - **Commit to main**: rama sobre la que se hará la actualización.
+
+## Pull Request
+
+La siguiente imagen muestra como se puede activar un **Pull Request**
+
+![foto13](imagenes/foto13.png)
+
+Esta opción sólo se activará después de un commit en una rama que no sea la **master**. Si estuvieramos en dicha rama no haría falta hacer un **PR**.
