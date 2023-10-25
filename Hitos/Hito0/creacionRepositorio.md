@@ -56,4 +56,4 @@ Pulsando en el botón indicado en la imágen anterior llegaremos a la web donde 
 
 ![foto14](imagenes/foto14.png)
 
-Si pulsamos sobre el botón * *Create Pull Request* * actualizaremos el código del proyecto.
+Si pulsamos sobre el botón ***Create Pull Request*** actualizaremos el código del proyecto.
