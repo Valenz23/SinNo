@@ -42,3 +42,4 @@ En la sección inferior izquierda de la aplicación, tenemos el cuadro para hace
 La estructura es la siguiente:
 - **Sumario**: tiene que ser breve y tratar de ser un titulo para la actualización del código
 - **Descripción**: aqui ya nos podemos explayar más, indicando por encima los cambios y las nuevas funcionalidades de nuestro código.
+- **Commit to main**: rama sobre la que se hará la actualización.
