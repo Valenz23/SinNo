@@ -36,7 +36,7 @@ Ahora volvemos a la web seccion *Settings --> SSH and GPG keys*.
 
 Y la añadimos.
 
-![foto6](imagenes/foto6.png). 
+![foto6](imagenes/foto6.png)
 
 Podemos ver en la pagina siguiente como ya tenemos disponible nuestra clave public. 
 
