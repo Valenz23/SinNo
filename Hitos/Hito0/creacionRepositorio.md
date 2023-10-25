@@ -51,3 +51,9 @@ La siguiente imagen muestra como se puede activar un **Pull Request**
 ![foto13](imagenes/foto13.png)
 
 Esta opción sólo se activará después de un commit en una rama que no sea la **master**. Si estuvieramos en dicha rama no haría falta hacer un **PR**.
+
+Pulsando en el botón indicado en la imágen anterior llegaremos a la web donde podremos ver la orden **PR** y los commits que se han hecho sobre ella:
+
+![foto14](imagenes/foto14.png)
+
+Si pulsamos sobre el botón * *Create Pull Request* * actualizaremos el código del proyecto.
