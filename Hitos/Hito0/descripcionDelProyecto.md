@@ -1,3 +1,3 @@
-# Descripción del problema
+# Descripción del proyecto
 
 Proximamente
