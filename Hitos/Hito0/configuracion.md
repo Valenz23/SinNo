@@ -30,7 +30,7 @@ Una vez pulsado ese botón se abrirá una ventana que nos mandara a loguearnos v
  
 ![foto3](imagenes/foto3.png)
 
-### Claves SSH
+### Clave SSH
 
 
 Para generar las claves ssh, usaremos la aplicación git-bash. 
