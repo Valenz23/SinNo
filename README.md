@@ -1,8 +1,15 @@
-# SinNo
+# Sonder
+
+![logo](Hitos/Hito0/imagenes/logo.png)
+
+Sistema de recomendación  ayuda basado en letras de canciones.
 
 ## Descripción
 
-Si
+Repositorio del proyecto de la asignatura de Cloud Computing del Master Universitario en Ingeniería Informática.
+
+La descripción inicial del proyecto se encuentra en el Hito 0.
+
 
 ## Hitos
 
