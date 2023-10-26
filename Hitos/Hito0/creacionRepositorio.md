@@ -9,10 +9,10 @@ En la imagen siguiente podemos ver las opciones con las que podemos crear nuestr
 
 - El nombre del repositorio es provisional y lo cambiare más tarde porque aun no tengo claro el tema del que va a tratar el proyecto.
 - No pondré descripción y elegiré el directorio donde tengo otros proyectos en github.
-- Clicamos la opcion de iniciar con un archivo README.
+- Clicamos la opción de iniciar con un archivo README.
 - Y usaremos la licencia GNU GLPv3.		
 
-Nos aseguramos que el codigo sea público desmarcando la opción señalada en la siguiente imagen.
+Nos aseguramos que el código sea público desmarcando la opción señalada en la siguiente imagen.
 
 ![foto10](imagenes/foto10.png)
 
