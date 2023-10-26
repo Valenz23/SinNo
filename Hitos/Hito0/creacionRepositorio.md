@@ -7,7 +7,7 @@ En la imagen siguiente podemos ver las opciones con las que podemos crear nuestr
 ![foto9](imagenes/foto9.png)
 
 
-- El nombre del repositorio es provisional y lo cambiare mas tarde porque aun no tengo claro el tema del que va a tratar el proyecto.
+- El nombre del repositorio es provisional y lo cambiare más tarde porque aun no tengo claro el tema del que va a tratar el proyecto.
 - No pondré descripción y elegiré el directorio donde tengo otros proyectos en github.
 - Clicamos la opcion de iniciar con un archivo README.
 - Y usaremos la licencia GNU GLPv3.		
