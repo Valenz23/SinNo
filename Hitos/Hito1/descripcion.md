@@ -1,4 +1,4 @@
-# Metodología usada para la creación de historias
+# Metodología usada para generar las historias de usuario
 
 Durante esta semana he ido madurando la idea comentada en el hito anterior ([enlace](../Hito0/descripcionDelProyecto.md)). 
 
