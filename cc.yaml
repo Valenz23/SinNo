@@ -5,4 +5,4 @@ test: src\tests\test_liked_list.py
 test: src\tests\test_songs.py
 test: src\tests\test_users.py
 
-fichero tareas: src\tasks.py
+fichero_tareas: src\tasks.py
