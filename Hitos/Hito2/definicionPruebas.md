@@ -9,10 +9,10 @@ Viendo lo anterior he definido varios ficheros que simulan ejecutar las pruebas 
 ![tree dir](img/tree_dir.png)
 
 Los **test** hacen las siguientes funciones:
-- test_batchs: testean la carga de lotes
-- test_liked_list: testean las listas personalizadas
-- test_songs: CRUD para canciones
-- test_users: CRUD para usuarios
+- test_batchs.py: testean la carga de lotes
+- test_liked_list.py: testean las listas personalizadas
+- test_songs.py: CRUD para canciones
+- test_users.py: CRUD para usuarios
 
 El gestor de pruebas se encuetra dentro del archivo ``tasks.py``, y permite realizar los test por separado, juntos e incluye un comando de ayuda.
 
