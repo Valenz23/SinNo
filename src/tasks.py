@@ -23,7 +23,7 @@ def test(c, name=""):
         c.run("python ./tests/test_liked_list.py -v")
 
     elif name == "batchs":
-        c.run("python ./tests/test_bacths.py -v")
+        c.run("python ./tests/test_batchs.py -v")
    
     elif name == "all":
         c.run("python ./tests/test_songs.py -v")
