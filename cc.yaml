@@ -1,8 +1,12 @@
 lenguaje: Python
 
-test: src\tests\test_batchs.py
-test: src\tests\test_liked_list.py
-test: src\tests\test_songs.py
-test: src\tests\test_users.py
+clase: src\clases\cancion.py
+clase: src\clases\user.py
+
+test: src\tests\test_anadirCancion.py
+test: src\tests\test_anadirLote.py
+test: src\tests\test_borrarCancion.py
+test: src\tests\test_buscarCancion.py
 
 fichero_tareas: src\tasks.py
+
