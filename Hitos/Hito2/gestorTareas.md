@@ -1,9 +1,11 @@
 ## Gestor de tareas
 
-Para la gestión de las tareas se usará **Invoke**. 
+Para la gestión de las tareas se usaremos **Invoke**. 
 
-**Invoke** es un paquete de Python que permite la gestión de tareas y ejecución de comandos a través de una interfaz sencilla, puedes definir tareas en Python e invocarlas desde línea de comandos. 
-Es usado comúnmente en procesos de desarrollo para automatizar tareas como la ejecución de pruebas, construcciñon de proyectos, genstión de entornos virtuales, etc.
+**Invoke** es un paquete de Python que permite la gestión de tareas y ejecución de comandos a través de una interfaz sencilla en la que puedes definir tareas e invocarlas desde línea de comandos. 
+
+Es usado comúnmente en procesos de desarrollo para automatizar tareas como la ejecución de pruebas, construcciñon de proyectos, genstión de entornos virtuales, etc. 
+
 Otro ventaja que posee es la sintexis limpia y fácil de entender. 
 
 ### Instalación
