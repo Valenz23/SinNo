@@ -1,10 +1,10 @@
 ## Librería de aserciones
 
-El siguiente paso es usar una librería para hacer test que validen las tareas de nuestro sistema. 
+El siguiente paso es determinar el marco de tareas que vamos a usar. 
 
-Para el proyecto usaré la librería **unittest** por que está integrada en la biblioteca estándar de Python, por lo que no hace falta instalar nada. 
+En este caso se usará **unittest**, porque sirve de marco de pruebas y además contiene una biblioteca de aserciones que podemos usar. Otra razón de su uso es que la librería **unittest** está integrada en la biblioteca estándar de Python, por lo que no hace falta instalar nada. 
 
-Además proporciona una variedad de ``asserts`` que pueden ser usados para verificar resultados esperados y los errores en las pruebas son fácilmente identificables, ya que muestra información detallada sobre el error.
+Los ``asserts`` que proporciona pueden ser usados para verificar resultados esperados y los errores en las pruebas son fácilmente identificables, ya que muestra información detallada sobre el error.
 
 Un ejemplo de uso de unittest es el siguiente:
 
@@ -14,6 +14,6 @@ El código verificará las funciones *test_string* y *test_boolean*, resultando 
 
 ![Ejemplo unittest 2](img/ejemplo_UT2.png)
 
-Ya podemos definir tareas y validarlas.
+Ya podemos definir tareas con **invoke** y hacer test de nuestro código con **unittest**.
 
 [Volver](README.md)
