@@ -8,11 +8,13 @@ Se han definido varios test que cumplan lo anterior.
 
 ![tree dir](img/tree_dir.png)
 
-Los **test** estan ubicados en el directio ``src\tests\`` y hacen lo:
-- *test_buscarCancion.py*: busca una canción a la BBDD ([ver](../../src/tests/test_buscarCancion.py))
-- *test_anadirCancion.py*: añade una canción a la BBDD ([ver](../../src/tests/test_anadirLote.py))
-- *test_borrarCancion.py*: borra una canción a la BBDD ([ver](../../src/tests/test_borrarCancion.py))
-- *test_anadirLote.py*: añade un lote de canciones a la BBDD ([ver](../../src/tests/test_anadirLote.py))
+Los **test** estan ubicados en el directio ``src\tests\`` y hacen lo siguiente:
+- *test_buscarCancion.py*: busca una canción a la BBDD ([ver](../../src/tests/test_buscarCancion.py)).
+- *test_anadirCancion.py*: añade una canción a la BBDD ([ver](../../src/tests/test_anadirLote.py)).
+- *test_borrarCancion.py*: borra una canción a la BBDD ([ver](../../src/tests/test_borrarCancion.py)).
+- *test_anadirLote.py*: añade un lote de canciones a la BBDD ([ver](../../src/tests/test_anadirLote.py)).
+
+Los test realizan las funciones definidas en la clase ``user.py`` ([ver](../../src/clases/user.py)).
 
 El gestor de pruebas se encuetra en el directorio ``src`` en el archivo ``tasks.py`` ([ver](../../src/tasks.py)), y permite realizar todos los test juntos e incluye un comando de ayuda.
 
