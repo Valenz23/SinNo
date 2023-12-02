@@ -2,25 +2,25 @@
 
 Las pruebas tienen que ir en relación con la lógica del negocio propuesta en hitos anteriores.
 
-Recordando un poco, nuestro sistema permite a  los usuarios , además de buscar, añadir y modificar canciones con su letra, crear listas personalizadas. También debe facilitar la adición de canciones en lotes, desde un fichero de texto (csv, excel, etc) 
+Recordando un poco, nuestro sistema debería permitir a  los usuarios buscar canciones, añadirlas, borrarlas y cargar lotes de ellas entre otras cosas.
 
-Viendo lo anterior he definido varios ficheros que simulan ejecutar las pruebas anteriores:
+Se han definido varios test que cumplan lo anterior.
 
 ![tree dir](img/tree_dir.png)
 
-Los **test** hacen las siguientes funciones:
-- *test_batchs.py*: testean la carga de lotes
-- *test_liked_list.py*: testean las listas personalizadas
-- *test_songs.py*: CRUD para canciones
-- *test_users.py*: CRUD para usuarios
+Los **test** estan ubicados en el directio ``src\tests\`` y hacen lo:
+- *test_buscarCancion.py*: busca una canción a la BBDD ([ver](../../src/tests/test_buscarCancion.py))
+- *test_anadirCancion.py*: añade una canción a la BBDD ([ver](../../src/tests/test_anadirLote.py))
+- *test_borrarCancion.py*: borra una canción a la BBDD ([ver](../../src/tests/test_borrarCancion.py))
+- *test_anadirLote.py*: añade un lote de canciones a la BBDD ([ver](../../src/tests/test_anadirLote.py))
 
-El gestor de pruebas se encuetra dentro del archivo ``tasks.py``, y permite realizar los test por separado, juntos e incluye un comando de ayuda.
+El gestor de pruebas se encuetra en el directorio ``src`` en el archivo ``tasks.py`` ([ver](../../src/tasks.py)), y permite realizar todos los test juntos e incluye un comando de ayuda.
 
-Los **comandos** que se observan en la siguiente imagen, y pueden ser obtenidos escribiendo por consola: ``inv help`` o ``invoke help``.
+Los **comandos** que se observan en la siguiente imagen, y pueden ser obtenidos escribiendo por consola: ``inv ayuda`` o ``invoke ayuda``.
 
 ![inv help](img/inv%20help.png)
 
-Realizando todos los test juntos ejecutando el comando ``inv test -n all`` (o invoke) tenemos la siguiente salida.
+Realizando todos los test juntos ejecutando el comando ``inv test`` (o invoke) tenemos la siguiente salida.
 
 ![inv help](img/inv%20test%20all.png)
 
