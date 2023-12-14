@@ -15,5 +15,11 @@ COPY src /sonder/src
 # establecemos el directorio de trabajo
 WORKDIR /sonder/src
 
+# Establecemos el usuario como root
+USER root
+
 # ejecutamos los test
 CMD ["/venv/bin/invoke", "test"]
+
+#docker build -t sonder .
+#docker run sonder

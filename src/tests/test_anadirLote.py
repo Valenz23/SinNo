@@ -6,7 +6,7 @@ class Testing(unittest.TestCase):
 
         a = admin()
 
-        lote = "BBDD\lote.csv"
+        lote = "BBDD/lote.csv"
 
         result = a.anadirLote(lote)
         
