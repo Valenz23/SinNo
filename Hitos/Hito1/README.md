@@ -4,3 +4,5 @@
 - Metodología usada para generar las historias de usuario ([enlace](descripcion.md))
 - Historias de usuario ([enlace](historiasUsuario.md))
 - Milestones ([enlace](milestone.md))
+
+[Ir a inicio](../../README.md)

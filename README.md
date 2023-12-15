@@ -15,8 +15,8 @@ La descripción inicial del proyecto se encuentra en el Hito 0.
 
 En esta sección iré enumerando los hitos de la asignatura junto con una breve descripción de ellos.
 
- - **Hito 0** ([enlace](Hitos/Hito0)): Configuración de github y descripción del proyecto.
- - **Hito 1** ([enlace](Hitos/Hito1)): Concretando y planificando el proyecto.
- - **Hito 2** ([enlace](Hitos/Hito2)): Tests.
- - **Hito 3** ([enlace](Hitos/Hito3/)): Creación de un contenedor para pruebas.
+ - **Hito 0** ([enlace](Hitos/Hito0/README.md)): Configuración de github y descripción del proyecto.
+ - **Hito 1** ([enlace](Hitos/Hito1/README.md)): Concretando y planificando el proyecto.
+ - **Hito 2** ([enlace](Hitos/Hito2/README.md)): Tests.
+ - **Hito 3** ([enlace](Hitos/Hito3/README.md)): Creación de un contenedor para pruebas.
  
