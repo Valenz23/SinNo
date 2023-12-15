@@ -24,7 +24,7 @@ Desde consola podemos ejecutar la siguiente orden: `"docker build -t sonder ."`,
 
 ![Cosntruir imagen](img/exec1.png)
 
-Como hemos usado un contenedor muy ligero, después de ejecutar el documento `Dockerfile` obtenemos un contenedor que apenas pesa unos 100 MB, como se puede observar en las siguientes figuras.
+Como hemos usado un contenedor muy ligero, después de ejecutar el documento `Dockerfile` obtenemos una imagen que apenas pesa unos 100 MB, como se puede observar en las siguientes figuras.
 
 ![ver imagen 1](img/comp1.1.png)
 ![ver imagen 2](img/comp1.png)
@@ -33,6 +33,6 @@ Para probar el contenedor y ver si pasa los test nos dirigimos una vez más a la
 
 ![Ejecutar contenedor](img/comp2.png)
 
-Vemos que pasa los test, por lo que ya tendriamos un contenedor que funciona correctamente. El próximo paso será publicar nuestro contenedor en **Docker Hub** y otro servicio de contenedores como **GitHub Container Registry**.
+Vemos que pasa los test, por lo que ya tendriamos un contenedor que funciona correctamente. El próximo paso será publicar nuestro contenedor en **Docker Hub** y otro servicio de contenedores como **GitHub Packages**.
 
 [Volver](README.md)
