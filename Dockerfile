@@ -9,9 +9,9 @@ LABEL maintainer="Pablo Valenzuela Álvarez --> <valenbetis@gmail.com>"
 # instalamos las dependencias
 RUN apk update
 RUN apk add python3 py3-pip bash
-RUN python3 -m venv /venv
 
-# instalamos invoke sobre el entorno virtual
+# hacemos el entorno virtual para invoke y lo instalamos
+RUN python3 -m venv /venv
 RUN /venv/bin/pip install invoke
 
 # copiamos los ficheros
