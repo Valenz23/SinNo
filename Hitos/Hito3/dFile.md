@@ -24,7 +24,7 @@ Desde consola podemos ejecutar la siguiente orden: `"docker build -t sonder ."`,
 
 ![Cosntruir imagen](img/exec1.png)
 
-Como hemos usado un contenedor muy ligero, después de ejecutar el documento `Dockerfile` obtenemos un contenedor que apenas pesa unos 100 MB, como se puede observar en las siguientes figuras.
+Como hemos usado un contenedor muy ligero, después de ejecutar el documento `Dockerfile` obtenemos una imagen que apenas pesa unos 100 MB, como se puede observar en las siguientes figuras.
 
 ![ver imagen 1](img/comp1.1.png)
 ![ver imagen 2](img/comp1.png)
