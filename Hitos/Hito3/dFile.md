@@ -33,6 +33,6 @@ Para probar el contenedor y ver si pasa los test nos dirigimos una vez más a la
 
 ![Ejecutar contenedor](img/comp2.png)
 
-Vemos que pasa los test, por lo que ya tendriamos un contenedor que funciona correctamente. El próximo paso será publicar nuestro contenedor en **Docker Hub** y otro servicio de contenedores como **GitHub Container Registry**.
+Vemos que pasa los test, por lo que ya tendriamos un contenedor que funciona correctamente. El próximo paso será publicar nuestro contenedor en **Docker Hub** y otro servicio de contenedores como **GitHub Packages**.
 
 [Volver](README.md)
