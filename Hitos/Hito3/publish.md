@@ -45,6 +45,14 @@ Si pulsamos sobre lo que esta resaltado en rojo en la figura anterior llegamos a
 
 ![Release](img/release2.png)
 
-Donde solo tenemos rellenar los formularios y pulsar sobre el botón verde para publicarla. Y una vez lo hayamos hecho, solo tendremos que comprobar si se ha publicado.
+Donde solo tenemos rellenar los formularios y pulsar sobre el botón verde para publicarla. Una vez lo hayamos hecho, solo tendremos que comprobar si se ha publicado.
+
+Y como se puede ver en las siguientes figuras, el contenedor se ha publicado en ambos repositorios.
+
+![Release](img/release3.png)
+
+![Release](img/release4.png)
+
+
 
 [Volver](README.md)
