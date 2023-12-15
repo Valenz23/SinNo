@@ -5,3 +5,5 @@
 - Configuración inicial ([enlace](configuracion.md))
 - Creación del repositorio ([enlace](creacionRepositorio.md))
 - Descripción del proyecto ([enlace](descripcionDelProyecto.md))
+
+[Ir a inicio](../../README.md)
