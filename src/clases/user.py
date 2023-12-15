@@ -3,7 +3,7 @@ import csv
 from clases.cancion import *
 
 # BBDD de canciones
-listaCanciones = "BBDD\canciones.csv"
+listaCanciones = "BBDD/canciones.csv"
 
 
 # cualquier usuario podrá buscar una canción
@@ -11,19 +11,24 @@ listaCanciones = "BBDD\canciones.csv"
 # valor -> valor dado por el usuario
 def buscarCancion(atributo, valor):
 
-    canciones = []
+    try:
 
-    # buscamos en la "BBDD"
-    with open(listaCanciones, 'r') as archivo:
+        canciones = []
 
-        archivoCSV = csv.DictReader(archivo)
+        # buscamos en la "BBDD"
+        with open(listaCanciones, 'r') as archivo:
 
-        for linea in archivoCSV:
-            # comparamos el atributo por el que estamos buscando
-            if valor in linea[atributo]:
-                canciones.append(linea["id"])   # retorna los ID de las canciones para su posterior get en la BBDD
+            archivoCSV = csv.DictReader(archivo)
 
-    return canciones
+            for linea in archivoCSV:
+                # comparamos el atributo por el que estamos buscando
+                if valor in linea[atributo]:
+                    canciones.append(linea["id"])   # retorna los ID de las canciones para su posterior get en la BBDD
+
+        return canciones
+    except: 
+        print(f"Error al buscar la canción")
+        return False
 
 # usuario ya logueado
 class usuario:
