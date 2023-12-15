@@ -41,6 +41,8 @@ Para probar el contenedor y ver si pasa los test nos dirigimos una vez más a la
 
 Vemos que pasa los test, por lo que ya tendriamos un contenedor que funciona correctamente. El próximo paso será publicar nuestro contenedor en **Docker Hub** y otro servicio de contenedores como **GitHub Container Registry**.
 
+## Publicar en Docker Hub y GitHub Packages
+
 
 # completer
 Se llevará a cabo en las siguientes rúbricas:
