@@ -1,11 +1,6 @@
 # Como base usaremos Alpine
 FROM alpine:latest
 
-# etiquetas
-LABEL version="0.3.1"
-LABEL description="Contenedor de la imagen de SONDER"
-LABEL maintainer="Pablo Valenzuela Álvarez --> <valenbetis@gmail.com>"
-
 # instalamos las dependencias
 RUN apk update
 RUN apk add python3 py3-pip bash
