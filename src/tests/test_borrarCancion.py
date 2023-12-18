@@ -4,7 +4,7 @@ import unittest
 class Testing(unittest.TestCase):
     def test_borrar_cancion(self):
 
-        # borramos la canción de shakira del otro test
+        # borraamos la canción de shakira del otro test
 
         a = admin()
 
