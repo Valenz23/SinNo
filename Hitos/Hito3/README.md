@@ -4,5 +4,6 @@
 1. Elección del contenedor base ([enlace](contenedorBase.md))
 2. Dockerfile ([enlace](dFile.md))
 3. Publicar en Docker Hub y GitHub Packages ([enlace](publish.md))
+4. Extra: Probando ambos repositorios
 
 [Ir a inicio](../../README.md)
