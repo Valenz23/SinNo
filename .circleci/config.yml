@@ -1,19 +1,19 @@
 version: 2.1
 
 jobs:
-
   docker-tests:
-    machine:
-      image: ubuntu-2204:current
+    docker:
+      - image: ubuntu-2204:current
     steps:
       - checkout
       - run:
           name: "Running tests in Docker container"
           command: |
-          docker run -t -v `pwd`:/app/test pvalenz23/sonder
-          docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
+            docker run -t -v `pwd`:/app/test pvalenz23/sonder && \
+            docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
 
 workflows:
+  version: 2
   all-tests:
     jobs:
       - docker-tests
