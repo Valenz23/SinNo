@@ -23,4 +23,4 @@ jobs:
           pip install invoke
 
       - name: Ejecuta los test
-        run: invoke test
+        run: invoke -r src test
