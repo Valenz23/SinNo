@@ -1,5 +1,7 @@
 name: Run test 
 
+run-name: ${{ github.actor }} is running tests 🚀
+
 on: [push]
 
 jobs:
