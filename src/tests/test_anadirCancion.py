@@ -17,8 +17,6 @@ class Testing(unittest.TestCase):
         # y la añadimos
         result = u.anadirCancion(c)
 
-        miau = "michi"
-
         self.assertTrue(result)        
 
 if __name__ == '__main__':
