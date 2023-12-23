@@ -2,6 +2,8 @@ version: 2.1
 
 jobs:
   docker-tests:
+    machine:
+      image: ubuntu-2304:current
     steps:
       - checkout
       - run:
@@ -9,6 +11,6 @@ jobs:
           command: docker run -t -v `pwd`:/app/test pvalenz23/sonder
 
 workflows:
-  all-test:
+  all-tests:
     jobs:
       - docker-tests
