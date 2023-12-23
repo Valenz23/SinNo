@@ -3,8 +3,8 @@ version: 2.1
 jobs:
 
   tests:
-    machine:
-      image: ubuntu-2204:current
+    docker:
+      - image: python:3.x
     steps:
       - checkout
       - run:
