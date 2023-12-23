@@ -10,6 +10,8 @@ class Testing(unittest.TestCase):
 
         cancion = buscarCancion(atributo,valor)
 
+        michi = "miau"
+
         self.assertTrue(cancion)
 
 if __name__ == '__main__':
