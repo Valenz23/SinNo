@@ -1,7 +1,6 @@
 version: 2.1
 
 jobs:
-
   tests:
     docker:
       - image: python:3.9
@@ -29,12 +28,13 @@ workflows:
   all-tests:
     jobs:
       - tests:
-        filters:
+          filters:
             paths:
               only:
                 - 'src/**'
       - docker-tests:
-        filters:
+          filters:
             paths:
               only:
                 - 'src/**'
+
