@@ -15,7 +15,9 @@ jobs:
 
       - run:
           name: Run tests
-          command: invoke test
+          command: |
+            cd src && \
+            invoke test
 
 
   docker-tests:
