@@ -2,13 +2,16 @@ version: 2.1
 
 jobs:
   docker-tests:
-    docker:
-      - image: pvalenz23/sonder
     steps:
       - checkout
       - run:
+          name: Install Docker
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y docker.io
+      - run:
           name: "Running tests in Docker"
-          command: docker run -t -v `pwd`:/app/test pvalenz23/sonder
+          command: docker run -t -v `pwd`:/app/test pvalenz23/sonder      
 
 workflows:
   version: 2
