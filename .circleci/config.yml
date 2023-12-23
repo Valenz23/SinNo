@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   docker-tests:
-    docker:
-      - image: ubuntu-2204:current
+    machine:
+      image: ubuntu-2204:current
     steps:
       - checkout
       - run:
