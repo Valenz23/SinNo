@@ -4,6 +4,10 @@ jobs:
   docker-tests:
     machine:
       image: ubuntu-2204:current
+    filters:
+      paths:
+        include:
+          - 'src/**'
     steps:
       - checkout
       - run:
