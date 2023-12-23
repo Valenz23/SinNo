@@ -13,7 +13,6 @@ jobs:
             docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
 
 workflows:
-  version: 2
   all-tests:
     jobs:
       - docker-tests
