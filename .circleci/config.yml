@@ -8,11 +8,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Intalando Python 3"
-          command: |
-            sudo apt-get update
-            sudo apt-get install python3
-      - run:
           name: "Running tests"
           command: |
             pip install --upgrade pip
