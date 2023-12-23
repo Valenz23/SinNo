@@ -14,6 +14,12 @@ Para que funcione tenemos que generar unas nuevas claves públicas y copiarlas d
 
 ## Fichero
 
+![fichero](img/ciCI3.png)
 
+[dashboard](https://app.circleci.com/pipelines/circleci/RbSHdQaX63s4AwV2C5Akhp/)
+
+![all test](img/ciCI4.png)
+
+![detalle](img/ciCI5.png)
 
 [Volver](README.md)

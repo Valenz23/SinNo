@@ -1,17 +1,17 @@
 version: 2.1
 
 jobs:
-  tests:
-    docker:
-      - image: python:3.9
-    steps:
-      - checkout
-      - run:
-          name: "Running tests"
-          command: |
-            pip install --upgrade pip
-            pip install invoke
-            cd src && invoke test
+  # tests:
+  #   docker:
+  #     - image: python:3.9
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: "Running tests"
+  #         command: |
+  #           pip install --upgrade pip
+  #           pip install invoke
+  #           cd src && invoke test
 
   docker-tests:
     machine:
@@ -27,6 +27,6 @@ jobs:
 workflows:
   all-tests:
     jobs:
-      - tests
+      # - tests
       - docker-tests
 
