@@ -2,6 +2,8 @@ version: 2.1
 
 jobs:
   docker-tests:
+    docker:
+      - image: pvalenz23/sonder
     steps:
       - checkout
       - run:
@@ -9,6 +11,7 @@ jobs:
           command: docker run -t -v `pwd`:/app/test pvalenz23/sonder
 
 workflows:
+  version: 2
   docker-ci-tests:
     jobs:
       - docker-tests
