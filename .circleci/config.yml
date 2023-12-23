@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  docker-tests:
+    steps:
+      - checkout
+      - run:
+          name: "Running tests in Docker"
+          command: docker run -t -v `pwd`:/app/test pvalenz23/sonder
+
+workflows:
+  docker-ci-tests:
+    jobs:
+      - docker-tests

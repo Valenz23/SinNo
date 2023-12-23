@@ -5,7 +5,8 @@ En este hito vamos a añadir integración continua (CI) a nuestro proyecto. Esta
 A continuación, mostraremos como se puede configurar la integración continua en dos plataformas.
  
 ## Índice
-1. Configuración de GitHub Actions ([enlace](confGA.md))
+1. Configuración de **GitHub Actions** ([enlace](confGA.md))
+2. Configuración de **CircleCI** ([enlace](confCICI.md))
 
 
 [Ir a inicio](../../README.md)

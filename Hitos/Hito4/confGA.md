@@ -1,6 +1,6 @@
 # Configuración de GitHub Actions
 
-Vamos a seguir usando **GitHub Actions** ya que lo usabamos para automatizar el proceso de creación y subida de contenedores a los repositorios indicados en el hito anterior **Docker Hub** y **GitHub Packages**.
+Vamos a seguir usando **GitHub Actions** ya que lo usabamos para automatizar el proceso de creación y subida de contenedores a los repositorios indicados en el hito anterior (**Docker Hub** y **GitHub Packages**).
 
 Tenemos que crear dos ficheros más para automatizar la ejecución de los test ([run_test.yml](../../.github/workflows/run_test.yml)) y la prueba de los contenedores ([run_test_docker](../../.github/workflows/run_test_docker.yml)), y ubicarlos en la misma dirección (`.github/workflows`) para que se ejecuten como flujos de trabajos tal y como lo indica la [documentación](https://docs.github.com/en/actions/quickstart) de GitHub Actions.
 
