@@ -2,7 +2,10 @@ name: Run test
 
 run-name: ${{ github.actor }} is running tests 🚀
 
-on: [push]
+on: 
+  push:
+    paths:
+      - 'src/**'  # solo se hacen los test si actualizo algo del código
 
 jobs:
   Test:
