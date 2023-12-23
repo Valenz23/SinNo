@@ -8,8 +8,6 @@ class Testing(unittest.TestCase):
         atributo = 'artista'
         valor = 'dragon'        
 
-        michi = "miau"
-
         cancion = buscarCancion(atributo,valor)
         self.assertTrue(cancion)
 
