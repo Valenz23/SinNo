@@ -20,7 +20,7 @@ jobs:
       - name: Instalando dependencias
         run: |
           python -m pip install --upgrade pip
-          pip install invoke bash
+          pip install invoke
 
-      - name: Ejecutar test
+      - name: Ejecuta los test
         run: invoke test
