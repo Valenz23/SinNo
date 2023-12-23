@@ -28,5 +28,5 @@ jobs:
           pwd
         
       - name: Ejecutar test
-        run: invoke -r src test
+        run: invoke -r src.test
         
