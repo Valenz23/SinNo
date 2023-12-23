@@ -27,14 +27,6 @@ jobs:
 workflows:
   all-tests:
     jobs:
-      - tests:
-        filters:
-          paths:
-            only:
-              - 'src/**'
-      - docker-tests:
-        filters:
-          paths:
-            only:
-              - 'src/**'
+      - tests
+      - docker-tests
 
