@@ -1,12 +1,26 @@
 version: 2.1
 
 jobs:
+
+  tests:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - checkout
+      - run:
+          name: "Running tests "
+          command: |
+            pip install --upgrade pip
+            pip install invoke
+
+      - run:
+          name: Run tests
+          command: invoke test
+
+
   docker-tests:
     machine:
       image: ubuntu-2204:current
-    filters:
-      paths:
-        include:
           - 'src/**'
     steps:
       - checkout
@@ -19,4 +33,5 @@ jobs:
 workflows:
   all-tests:
     jobs:
+      - tests
       - docker-tests
