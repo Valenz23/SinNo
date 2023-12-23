@@ -30,7 +30,7 @@ Una vez hayamos realizado un **push** cambiando algo del código , si nos dirigi
 
 ![workflows](img/workflow1.png)
 
-Como podemos observar han sido validadas correctamente, y si pulsamos sobre una de ellas podemos ver los detalles de su ejecución.
+Como podemos observar, ambas han sido validadas correctamente. Pulsando sobre ellas podemos ver más detalles de su ejecución.
 
 ![workflow 1](img/workflow2.png)
 
