@@ -8,22 +8,32 @@ A continuación comenzaremos a configurar el sistema para la integración contin
 
 ## Configuración inicial
 
-Una vez nos registremos en la web oficial, podemos conectar nuestro repositorio de github siguiendo unas instrucciones bastante sencillas.
+Una vez nos registremos en la web oficial, podemos conectar nuestro repositorio de github siguiendo las instrucciones abajo mostradas, que son bastante sencillas.
 
 ![conectar](img/ciCI1.png)
 
-Para que funcione tenemos que generar unas nuevas claves públicas y copiarlas donde nos dicen las instrucciones (ver siguientes fotos).
+Para que funcione tenemos que generar unas nuevas claves públicas y copiarlas en el lugar que nos indican los pasos 2 y 3 de la siguiente figura.
 
 ![instucciones](img/ciCI2.png)
 
-## Fichero
+## Fichero config.yml
+
+Una vez terminada la configuración inicial, podemos crear el archivo de configuración del flujo de trabajo. Este fichero deberá ser nombrado como *config.yml* y tiene que estar ubicado en la carpeta ``.circleci`` en la raiz del proyecto.
+
+El fichero (mostrado en la siguiente ficura), tiene definidos dos flujos de trabajo que se ejecutarán cada vez que se haga un **push**. En este fichero podemos definir tantos tests como queramos mediante la etiqueta ``jobs``, sin olvidar incluirlos en la ejecución final que se hará en la etiqueta ``workflows``.
 
 ![fichero](img/ciCI3.png)
 
-[dashboard](https://app.circleci.com/pipelines/circleci/RbSHdQaX63s4AwV2C5Akhp/)
+## Comprobación de los test
+
+Tras realizar un **push**, podemos comprobar el resultado de los tests hechos en el siguiente [enlace](https://app.circleci.com/pipelines/circleci/RbSHdQaX63s4AwV2C5Akhp).
+
+Seleccionando el test correspondiente al último **push** que hemos hecho podemos observar más detalles, como la duración o el código generado de los propios tests (ver siguientes figuras).
 
 ![all test](img/ciCI4.png)
 
 ![detalle](img/ciCI5.png)
+
+
 
 [Volver](README.md)
