@@ -18,9 +18,9 @@ Para que funcione tenemos que generar unas nuevas claves públicas y copiarlas e
 
 ## Fichero config.yml
 
-Una vez terminada la configuración inicial, podemos crear el archivo de configuración del flujo de trabajo. Este fichero deberá ser nombrado como *config.yml* y tiene que estar ubicado en la carpeta ``.circleci`` en la raiz del proyecto.
+Una vez terminada la configuración inicial, podemos crear el archivo de configuración del flujo de trabajo. Este fichero deberá ser nombrado como *config.yml* y tiene que estar ubicado en la carpeta ``.circleci`` en la raíz del proyecto.
 
-El fichero (mostrado en la siguiente ficura), tiene definidos dos flujos de trabajo que se ejecutarán cada vez que se haga un **push**. En este fichero podemos definir tantos tests como queramos mediante la etiqueta ``jobs``, sin olvidar incluirlos en la ejecución final que se hará en la etiqueta ``workflows``.
+El fichero (mostrado en la siguiente figura), tiene definidos dos flujos de trabajo que se ejecutarán cada vez que se haga un **push**. En este fichero podemos definir tantos tests como queramos mediante la etiqueta ``jobs``, sin olvidar incluirlos en la ejecución final que se hará con la etiqueta ``workflows``.
 
 ![fichero](img/ciCI3.png)
 
@@ -33,7 +33,5 @@ Seleccionando el test correspondiente al último **push** que hemos hecho podemo
 ![all test](img/ciCI4.png)
 
 ![detalle](img/ciCI5.png)
-
-
 
 [Volver](README.md)

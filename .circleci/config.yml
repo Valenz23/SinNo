@@ -27,6 +27,6 @@ jobs:
 workflows:
   all-tests:
     jobs:
-      # - tests
+      - tests
       - docker-tests
 
