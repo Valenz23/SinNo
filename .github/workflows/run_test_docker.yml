@@ -1,0 +1,17 @@
+name: Run docker test 
+run-name: ${{ github.actor }} is running docker tests 🚀
+on: 
+  push:
+    paths:
+      - 'src/**' 
+jobs:
+  Docker-Test:
+    runs-on: ubuntu-latest    
+    steps:      
+      - name: Check out repository code
+        uses: actions/checkout@v4      
+      - name: Ejecutar docker test
+        run: |
+          docker run -t -v `pwd`:/app/test pvalenz23/sonder
+          docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
+        

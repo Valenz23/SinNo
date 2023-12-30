@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  tests:
+    docker:
+      - image: python:3.9
+    steps:
+      - checkout
+      - run:
+          name: "Running tests"
+          command: |
+            pip install --upgrade pip
+            pip install invoke
+            cd src && invoke test
+
+  docker-tests:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - checkout
+      - run:
+          name: "Running tests in Docker container"
+          command: |
+            docker run -t -v `pwd`:/app/test pvalenz23/sonder && \
+            docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
+
+workflows:
+  all-tests:
+    jobs:
+      - tests
+      - docker-tests
+

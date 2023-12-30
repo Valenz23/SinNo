@@ -6,10 +6,9 @@ class Testing(unittest.TestCase):
 
         # buscar por el atributo artista el valor dragon
         atributo = 'artista'
-        valor = 'dragon'
+        valor = 'dragon'        
 
         cancion = buscarCancion(atributo,valor)
-
         self.assertTrue(cancion)
 
 if __name__ == '__main__':
