@@ -20,4 +20,5 @@ En esta sección iré enumerando los hitos de la asignatura junto con una breve 
  - **Hito 2** ([enlace](Hitos/Hito2/README.md)): Tests.
  - **Hito 3** ([enlace](Hitos/Hito3/README.md)): Creación de un contenedor para pruebas.
  - **Hito 4** ([enlace](Hitos/Hito4/README.md)): Integración continua.
+ - **Hito 5** ([enlace](Hitos/Hito5/README.md)): Diseño y test de un microservicio.
  

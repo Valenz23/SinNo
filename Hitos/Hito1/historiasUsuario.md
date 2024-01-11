@@ -8,3 +8,5 @@
 - **[HU6] ADMIN**: Quiero que la gente use mi aplicación, y para ello necesito tener una base de datos de canciones disponible. Necesito poder cargar grandes cantidades de datos en un momento y no ir de uno en uno. Así actualizo de golpe mi base de datos y gano mucho tiempo.
 - **[HU7] ADMIN**: Tengo que controlar que los datos (en este caso las letras de las canciones) sean correctos. Los usuarios que se registren pueden cambiar la letra de una canción y es conveniente revisar si esos cambios "eran necesarios".
   
+[Volver](README.md)
+
