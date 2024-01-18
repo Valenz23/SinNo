@@ -1,8 +1,15 @@
 # Hito 5: Diseño y test de un microservicio.
 
+Para la realización del hito 5 debemos crear un microservicio (API Rest) sobre la base de la funcionalidad del hito anterior, cumpliendo los requisitos de las historias de usuario.
+
+Para ello tenemos que elegir un framework para el desarrollo del microservicio, asi como usar logs y hacer test de acuerdo con las historias de usuario.
 
  
 ## Índice
+
+- Elección del framework para el microservicio ([enlace](1_selectFW.md)).
+
+# aaaaaaaaaaa
     Valoración:
 
     2 puntos: Justificación técnica del framework elegido para el microservicio.
