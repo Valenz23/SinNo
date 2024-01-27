@@ -9,9 +9,10 @@ def ayuda(c):
 
 @task
 def test(c):
-    c.run("python -m unittest discover -v")
+    c.run("python -m unittest -v")
 
 @task
 def apitest(c):
-    c.run("cd api && python -m unittest discover -v")
+    # c.run("cd api && python -m unittest -v")
+    c.run("python -m unittest api/test_sonder_api.py -v")
     

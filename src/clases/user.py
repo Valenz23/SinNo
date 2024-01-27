@@ -23,7 +23,8 @@ def buscarCancion(atributo, valor):
             for linea in archivoCSV:
                 # comparamos el atributo por el que estamos buscando
                 if valor in linea[atributo]:
-                    canciones.append(linea["id"])   # retorna los ID de las canciones para su posterior get en la BBDD
+                    # canciones.append(linea["id"])   # retorna los ID de las canciones para su posterior get en la BBDD
+                    canciones.append(linea)   # retorna todo
 
         return canciones
     except: 
