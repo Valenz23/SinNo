@@ -166,3 +166,11 @@
 28-01-24 12:55:40 - Encontrada cancion: campo: titulo | valor: test
 28-01-24 12:55:44 - Modificando cancion: id: 1004 | letra: hola que tal
 28-01-24 12:55:47 - Encontrada cancion: campo: titulo | valor: test
+28-01-24 12:56:55 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 12:56:55 - ADD lote: path: BBDD/lote.csv
+28-01-24 12:56:56 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 12:56:56 - DELETE cancion: id: 9999
+28-01-24 12:56:56 - Listando canciones por popularidad
+28-01-24 12:56:56 - Modificando cancion: id: 1004 | letra: api letra
+28-01-24 12:56:56 - Servicio no encontrado
+28-01-24 12:56:56 - Servicio disponible
