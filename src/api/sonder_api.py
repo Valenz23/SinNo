@@ -6,9 +6,6 @@ import random
 from clases.user import *
 from clases.cancion import *
 
-# COPIUM https://github.com/Nastard/F1Department/blob/main/f1department/f1department_api.py
-# COPIUM https://github.com/Nastard/F1Department/blob/main/tests/test_f1department_api.py
-
 # configuracion de logging
 logging.basicConfig(filename='./logs/app.log', filemode='a', format='%(asctime)s - %(message)s', datefmt='%d-%m-%y %H:%M:%S', level=logging.INFO)
 

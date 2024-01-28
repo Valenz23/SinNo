@@ -1,5 +1,7 @@
-# Diseño de la API
+# Test de la API
 
-asdasd
+# nuevas dos funciones
+# replica de todos los test anteriores a la api
+# corregido error en la integracion continua
 
 [Volver](README.md)
