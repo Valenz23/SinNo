@@ -1,5 +1,6 @@
 
 import csv
+import pandas as pd
 from clases.cancion import *
 
 # BBDD de canciones
@@ -29,6 +30,20 @@ def buscarCancion(atributo, valor):
         return canciones
     except: 
         print(f"Error al buscar la canción")
+        return False
+    
+# NUEVO
+# lista canciones por popularidad
+def listarCanciones():
+    try:
+        
+        df = pd.read_csv(listaCanciones)
+        sorted_canciones = df.sort_values(by=["popularidad"], ascending=False)
+        # print(sorted_canciones)
+        return sorted_canciones
+        
+    except:
+        print(f"Error al listar las canciones")
         return False
 
 # usuario ya logueado

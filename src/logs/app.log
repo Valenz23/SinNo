@@ -1,0 +1,69 @@
+28-01-24 10:03:36 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 10:03:36 - ADD lote: path: BBDD/lote.csv
+28-01-24 10:03:36 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 10:03:36 - DELETE cancion: id: 9999
+28-01-24 10:03:36 - Servicio no encontrado
+28-01-24 10:03:36 - Servicio disponible
+28-01-24 10:03:55 - No se encontro ninguna cancion: campo: titulo | valor: girl
+28-01-24 10:04:00 - ADD cancion: artista: postman | titulo: probando |letra: probando postman
+28-01-24 10:04:06 - ADD lote: path: BBDD/lote.csv
+28-01-24 10:04:11 - DELETE cancion: id: 9999
+28-01-24 10:04:13 - Encontrada cancion: campo: titulo | valor: girl
+28-01-24 10:04:25 - DELETE cancion: id: 8888
+28-01-24 10:04:29 - DELETE cancion: id: 6666
+28-01-24 10:04:33 - DELETE cancion: id: 4444
+28-01-24 10:04:37 - DELETE cancion: id: 2222
+28-01-24 11:08:24 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:08:24 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:08:24 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:08:24 - DELETE cancion: id: 9999
+28-01-24 11:08:24 - Servicio no encontrado
+28-01-24 11:08:24 - Servicio disponible
+28-01-24 11:09:21 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:09:21 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:09:21 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:09:21 - DELETE cancion: id: 9999
+28-01-24 11:09:21 - Servicio no encontrado
+28-01-24 11:09:22 - Servicio disponible
+28-01-24 11:13:34 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:13:34 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:13:34 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:13:34 - DELETE cancion: id: 9999
+28-01-24 11:13:34 - Servicio no encontrado
+28-01-24 11:13:34 - Servicio disponible
+28-01-24 11:13:42 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:13:42 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:13:42 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:13:43 - DELETE cancion: id: 9999
+28-01-24 11:13:43 - Servicio no encontrado
+28-01-24 11:13:43 - Servicio disponible
+28-01-24 11:19:05 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:19:05 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:19:05 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:19:05 - DELETE cancion: id: 9999
+28-01-24 11:19:05 - Servicio no encontrado
+28-01-24 11:19:05 - Servicio disponible
+28-01-24 11:19:15 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:19:15 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:19:15 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:19:15 - DELETE cancion: id: 9999
+28-01-24 11:19:15 - Servicio no encontrado
+28-01-24 11:19:15 - Servicio disponible
+28-01-24 11:19:23 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:19:23 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:19:23 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:19:23 - DELETE cancion: id: 9999
+28-01-24 11:19:23 - Servicio no encontrado
+28-01-24 11:19:23 - Servicio disponible
+28-01-24 11:23:14 - Listando canciones por popularidad
+28-01-24 11:24:09 - Listando canciones por popularidad
+28-01-24 11:28:09 - Listando canciones por popularidad
+28-01-24 11:29:54 - ADD cancion: artista: test | titulo: test |letra: test
+28-01-24 11:29:54 - ADD lote: path: BBDD/lote.csv
+28-01-24 11:29:54 - Encontrada cancion: campo: artista | valor: dragon
+28-01-24 11:29:54 - DELETE cancion: id: 9999
+28-01-24 11:29:54 - Servicio no encontrado
+28-01-24 11:29:54 - Servicio disponible
+28-01-24 11:38:57 - Listando canciones por popularidad
+28-01-24 11:39:37 - Listando canciones por popularidad
+28-01-24 11:40:13 - Listando canciones por popularidad

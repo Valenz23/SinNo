@@ -7,7 +7,10 @@ Para ello tenemos que elegir un framework para el desarrollo del microservicio, 
  
 ## Índice
 
-- Elección del framework para el microservicio ([enlace](1_selectFW.md)).
+- Framework para el microservicio ([enlace](1_selectFW.md)).
+- Diseño de la API ([enlace](2_disAPI.md))
+- Uso de logs ([enlace](3_usoLogs.md))
+- Test de la API ([enlace](4_testAPI.md))
 
 # aaaaaaaaaaa
     Valoración:

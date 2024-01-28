@@ -13,13 +13,9 @@ class TestSonderApi(unittest.TestCase):
         data = hug.test.get(api, '/error')
         self.assertEqual(data.status, hug.HTTP_404)
 
-    def test_api_buscar_cancion_correct(self):
+    def test_api_buscar_cancion(self):
         data = hug.test.get(api,'/buscar', {'atributo':'artista','valor':'dragon'})
         self.assertEqual(data.status, hug.HTTP_200)
-
-    # def test_buscar_cancion_fail(self):
-    #     data = hug.test.get(api,'/buscar', {'atributo':'none','valor':'none'}) 
-    #     self.assertEqual(data.status, hug.HTTP_404)
 
     def test_api_add_cancion(self):
         data = hug.test.put(api, '/add', {'artista':'test', 'titulo':'test', 'letra':'test'})
@@ -31,6 +27,10 @@ class TestSonderApi(unittest.TestCase):
 
     def test_api_add_lote(self):
         data = hug.test.put(api, '/lote', {'path':'BBDD/lote.csv'})
+        self.assertEqual(data.status, hug.HTTP_200)
+
+    def test_api_listar_canciones(self):
+        data = hug.test.put(api, '/lista')
         self.assertEqual(data.status, hug.HTTP_200)
     
 if __name__ == '__main__':

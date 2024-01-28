@@ -67,8 +67,8 @@ def api_add_cancion(artista:str, titulo:str, letra:str):
     
     logging.info(mensaje)
     return {
-		"mensaje":mensaje,
-		"status":status
+		  "mensaje":mensaje,
+		  "status":status
     }
 
 @hug.delete('/del')
@@ -82,8 +82,8 @@ def api_delete_cancion(id:str):
     
     logging.info(mensaje)
     return {
-		"mensaje":mensaje,
-		"status":status
+		  "mensaje":mensaje,
+		  "status":status
     }
 
 @hug.put('/lote')
@@ -97,6 +97,25 @@ def api_add_lote(path:str):
     
     logging.info(mensaje)
     return {
-		"mensaje":mensaje,
-		"status":status
+		  "mensaje":mensaje,
+		  "status":status
+    }
+
+@hug.get('/lista')
+def api_listar_canciones():
+     
+    lista = listarCanciones()
+    # lista = lista.drop(lista.index[0])
+    lista = lista.to_numpy()
+
+    mensaje = "Listando canciones por popularidad"
+    status = "OK"
+
+
+
+    logging.info(mensaje)
+    return {
+		  "mensaje":mensaje,
+      "lista":lista,
+		  "status":status
     }
