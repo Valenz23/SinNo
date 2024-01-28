@@ -30,7 +30,11 @@ class TestSonderApi(unittest.TestCase):
         self.assertEqual(data.status, hug.HTTP_200)
 
     def test_api_listar_canciones(self):
-        data = hug.test.put(api, '/lista')
+        data = hug.test.get(api, '/lista')
+        self.assertEqual(data.status, hug.HTTP_200)
+
+    def test_api_modificar_letra(self):
+        data = hug.test.put(api, '/mod', {'id':'1004','letra':'api letra'})
         self.assertEqual(data.status, hug.HTTP_200)
     
 if __name__ == '__main__':

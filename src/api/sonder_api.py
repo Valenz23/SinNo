@@ -105,13 +105,10 @@ def api_add_lote(path:str):
 def api_listar_canciones():
      
     lista = listarCanciones()
-    # lista = lista.drop(lista.index[0])
     lista = lista.to_numpy()
 
     mensaje = "Listando canciones por popularidad"
     status = "OK"
-
-
 
     logging.info(mensaje)
     return {
@@ -119,3 +116,18 @@ def api_listar_canciones():
       "lista":lista,
 		  "status":status
     }
+
+@hug.put('/mod')
+def api_modificar_letra(id:int, letra:str):
+    u = usuario()
+    mensaje = f"Modificando cancion: id: {id} | letra: {letra}"
+    status = "OK"
+
+    u.modificarLetra(id, letra)
+    
+    logging.info(mensaje)
+    return {
+		  "mensaje":mensaje,
+		  "status":status
+    }
+

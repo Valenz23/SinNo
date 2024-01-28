@@ -82,6 +82,20 @@ class usuario:
         except:   
             print("Error al añadir la canción")
             return False
+        
+    # modificar la letra de una cancion
+    def modificarLetra(self, id, letra):
+
+        try:
+            df = pd.read_csv(listaCanciones)
+            df.loc[df['id'] == id, 'letra'] = letra      
+            # print(df)
+            df.to_csv(listaCanciones, index=False)      
+
+            return True
+        except:
+            print(f"Error al modificar letra")
+            return False
 
 
 class admin(usuario):
