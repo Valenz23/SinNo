@@ -4,6 +4,7 @@ FROM alpine:latest
 # instalamos las dependencias
 RUN apk update
 RUN apk add python3 py3-pip bash
+RUN apk add hug logging
 
 # hacemos el entorno virtual para invoke y lo instalamos
 RUN python3 -m venv /venv
