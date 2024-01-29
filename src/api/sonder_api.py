@@ -3,7 +3,7 @@ import logging
 import random
 
 
-from clases.user import *
+from clases.user import * 
 from clases.cancion import *
 
 # configuracion de logging
