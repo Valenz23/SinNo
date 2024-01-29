@@ -14,7 +14,7 @@ def status():
 	mensaje = "Servicio disponible"
 	status = "OK"
 	logging.info(mensaje)
-	return {
+	return { 
 		"mensaje":mensaje,
 		"status":status
     }
