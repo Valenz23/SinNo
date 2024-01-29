@@ -8,7 +8,7 @@ Se han definido varios test que cumplan lo anterior.
 
 ![tree dir](img/tree_dir.png)
 
-Los **test** estan ubicados en el directio ``src\tests\`` y hacen lo siguiente:
+Los **test** estan ubicados en el directorio ``src\tests\`` y hacen lo siguiente:
 - *test_buscarCancion.py*: busca una canción a la BBDD ([ver](../../src/tests/test_buscarCancion.py)).
 - *test_anadirCancion.py*: añade una canción a la BBDD ([ver](../../src/tests/test_anadirLote.py)).
 - *test_borrarCancion.py*: borra una canción a la BBDD ([ver](../../src/tests/test_borrarCancion.py)).

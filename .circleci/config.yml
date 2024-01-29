@@ -10,7 +10,7 @@ jobs:
           name: "Running tests"
           command: |
             pip install --upgrade pip
-            pip install invoke
+            pip install invoke hug pandas
             cd src && invoke test
 
   docker-tests:

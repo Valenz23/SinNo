@@ -60,4 +60,6 @@ Podemos ver en la pagina siguiente como ya tenemos disponible nuestra clave SSH.
 Y por ultimo, configuramos nuestra cuenta como nos dice la explicación del hito 0. Poniendo un avatar, nuestro nombre completo, ciudad y universidad.
 
 ![foto8](imagenes/foto8.png)	
-	
+
+[Volver](README.md)
+

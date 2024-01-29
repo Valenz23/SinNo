@@ -1,5 +1,6 @@
 
 import csv
+import pandas as pd
 from clases.cancion import *
 
 # BBDD de canciones
@@ -23,11 +24,26 @@ def buscarCancion(atributo, valor):
             for linea in archivoCSV:
                 # comparamos el atributo por el que estamos buscando
                 if valor in linea[atributo]:
-                    canciones.append(linea["id"])   # retorna los ID de las canciones para su posterior get en la BBDD
+                    # canciones.append(linea["id"])   # retorna los ID de las canciones para su posterior get en la BBDD
+                    canciones.append(linea)   # retorna todo
 
         return canciones
     except: 
         print(f"Error al buscar la canción")
+        return False
+    
+# NUEVO
+# lista canciones por popularidad
+def listarCanciones():
+    try:
+        
+        df = pd.read_csv(listaCanciones)
+        sorted_canciones = df.sort_values(by=["popularidad"], ascending=False)
+        # print(sorted_canciones)
+        return sorted_canciones
+        
+    except:
+        print(f"Error al listar las canciones")
         return False
 
 # usuario ya logueado
@@ -65,6 +81,20 @@ class usuario:
             
         except:   
             print("Error al añadir la canción")
+            return False 
+        
+    # modificar la letra de una cancion
+    def modificarLetra(self, id, letra):
+
+        try:
+            df = pd.read_csv(listaCanciones)
+            df.loc[df['id'] == id, 'letra'] = letra      
+            # print(df)
+            df.to_csv(listaCanciones, index=False)      
+
+            return True
+        except:
+            print(f"Error al modificar letra")
             return False
 
 
