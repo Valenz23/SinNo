@@ -14,4 +14,5 @@ WORKDIR /sonder/src
 COPY src /sonder/src
 
 # Establezco el comando por defecto para ejecutar los tests y activar la API
-CMD ["sh", "-c", "invoke test && hug -f api/sonder_api.py"]
+# CMD ["sh", "-c", "invoke test && hug -f api/sonder_api.py"]
+CMD ["sh", "-c", "invoke test"]
