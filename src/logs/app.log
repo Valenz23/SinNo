@@ -174,3 +174,30 @@
 28-01-24 12:56:56 - Modificando cancion: id: 1004 | letra: api letra
 28-01-24 12:56:56 - Servicio no encontrado
 28-01-24 12:56:56 - Servicio disponible
+29-01-24 10:05:24 - Servicio disponible
+29-01-24 10:08:55 - Encontrada cancion: campo: titulo | valor: test
+29-01-24 10:09:05 - Encontrada cancion: campo: titulo | valor: valley
+29-01-24 10:11:23 - ADD cancion: artista: postman | titulo: probando |letra: probando postman
+29-01-24 10:12:34 - No se encontro ninguna cancion: campo: titulo | valor: postman
+29-01-24 10:12:42 - Encontrada cancion: campo: titulo | valor: probando
+29-01-24 10:17:04 - DELETE cancion: id: 9999
+29-01-24 10:17:44 - No se encontro ninguna cancion: campo: titulo | valor: probando
+29-01-24 10:55:57 - ADD cancion: artista: test | titulo: test |letra: test
+29-01-24 10:55:57 - ADD lote: path: BBDD/lote.csv
+29-01-24 10:55:57 - Encontrada cancion: campo: artista | valor: dragon
+29-01-24 10:55:57 - DELETE cancion: id: 9999
+29-01-24 10:55:57 - Listando canciones por popularidad
+29-01-24 10:55:57 - Modificando cancion: id: 1004 | letra: api letra
+29-01-24 10:55:57 - Servicio no encontrado
+29-01-24 10:55:57 - Servicio disponible
+29-01-24 11:00:56 - ADD lote: path: BBDD/lote.csv
+29-01-24 11:02:24 - Listando canciones por popularidad
+29-01-24 11:05:43 - No se encontro ninguna cancion: campo: titulo | valor: probando
+29-01-24 11:06:21 - ADD cancion: artista: postman | titulo: probando |letra: test
+29-01-24 11:06:34 - Modificando cancion: id: 1004 | letra: api
+29-01-24 11:06:43 - Modificando cancion: id: 1004 | letra: api letra
+29-01-24 11:06:50 - Encontrada cancion: campo: titulo | valor: test
+29-01-24 11:07:29 - Modificando cancion: id: 1004 | letra: api letra
+29-01-24 11:07:53 - Encontrada cancion: campo: titulo | valor: test
+29-01-24 11:09:01 - Modificando cancion: id: 1004 | letra: estoy modificando la letra
+29-01-24 11:09:16 - Encontrada cancion: campo: titulo | valor: test

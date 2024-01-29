@@ -1,20 +1,17 @@
-# Como base usaremos Alpine
-FROM alpine:latest
+# Utilizo una imagen de Python slim como base
+FROM python:3.8-slim
 
-# instalamos las dependencias
-RUN apk update
-RUN apk add python3 py3-pip bash
-RUN apk add hug logging
+# Instalo las dependencias necesarias
+RUN apt-get update
 
-# hacemos el entorno virtual para invoke y lo instalamos
-RUN python3 -m venv /venv
-RUN /venv/bin/pip install invoke
+# Instalo las dependencias de la aplicación
+RUN pip install hug invoke pandas
 
-# copiamos los ficheros
-COPY src /sonder/src
-
-# establecemos el directorio de trabajo
+# Configuro el directorio de trabajo
 WORKDIR /sonder/src
 
-# ejecutamos los test
-CMD ["/venv/bin/invoke", "test"]
+# Copio los archivos de tu aplicación
+COPY src /sonder/src
+
+# Establezco el comando por defecto para ejecutar los tests y activar la API
+CMD ["sh", "-c", "invoke test && hug -f api/sonder_api.py"]

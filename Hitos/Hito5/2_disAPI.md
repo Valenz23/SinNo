@@ -22,7 +22,9 @@ Y las rutas generadas son las siguientes:
     - *id*: identificador de la canción en la BBDD.
     - *letra*: letra corregida de la canción.
 
-Para realización de estas funcionalidades har sido necesario usar los métodos **GET**, **PUT** y **DELETE**.
+Para realización de estas funcionalidades ha sido necesario usar los métodos **GET**, **PUT** y **DELETE**. Si probamos a pasar los tests obtenemos la imagen siguiente (si todo ha ido bien).
+
+![tests](img/tests.png)
 
 Las pruebas de la API se verán en su sección correspondiente de este hito.
 

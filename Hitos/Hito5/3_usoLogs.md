@@ -2,11 +2,11 @@
 
 Para generar logs se ha usado la librería **logging**. Esta librería esta incluida en Python y se puede usar con el framework **hug** para generar los registros de nuestra API muy fácilmente.
 
-Para obtener más información de esta librería podemos acceder a su [documentación](https://docs.python.org/3/library/logging.html).
+Si queremos obtener más información de esta librería podemos acceder a su [documentación](https://docs.python.org/3/library/logging.html).
 
 ## Configuración y resultados
 
-Para configurar **logging** basta con escribir la siguiente línea en nuestra API.
+Para configurar **logging**m basta con escribir la siguiente línea en nuestra API.
 
 ![log-config](img/log-config.png)
 

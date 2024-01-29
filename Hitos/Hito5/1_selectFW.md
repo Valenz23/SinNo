@@ -14,7 +14,7 @@ Elegir un framework para desarrollar un microservicio depende en gran medida de 
 
 ![hug-logo](img/hug-logo.png)
 
-Como muestra la foto anterior, el framework elegido para realizar nuestra API es **hug**. Las razones de su elecciónn son las siguiente:
+Como muestra la foto anterior, el framework elegido para realizar nuestra API es **hug**. Las razones de su elecciónn son las siguienteS:
 - Como decía en el punto anterior, su **simplicidad** y **facilidad** de uso ayuda a desarrollar rápido y sin apenas complicaciones.
 - Tiene un buen **rendmiento** y ofrece **flexibilidad** en el manejo de datos y formatos, lo que es útil para mostrar información en los test de la API.
 

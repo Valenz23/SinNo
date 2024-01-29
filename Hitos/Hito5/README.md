@@ -10,5 +10,6 @@ Para ello tenemos que elegir un framework para el desarrollo del microservicio, 
 - Diseño de la API ([enlace](2_disAPI.md))
 - Uso de logs ([enlace](3_usoLogs.md))
 - Test de la API ([enlace](4_testAPI.md))
+- Extra: problemas encontrados ([enlace](5_problemas.md))
 
 [Ir a inicio](../../README.md)
