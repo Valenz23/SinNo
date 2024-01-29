@@ -1,4 +1,4 @@
-# Errores corregidos
+# Problemas encontrados
 
 En esta sección extra comentaré dos problemas que se han solucionado debido a la agregación de varias librerías (hug, ...)
 
