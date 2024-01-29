@@ -8,7 +8,7 @@ Elegir un framework para desarrollar un microservicio depende en gran medida de 
 - **[Flask](https://flask.palletsprojects.com/en/3.0.x/)**: Es un "micro" framework desarrollado en Python y concebido para facilitar el desarrollo de aplicaciones web bajo el patrón MVC. Cuenta con un depurador y soporte integrado para realizar pruebas unitarioas. Flask es *open source* y esta amparado  bajo una licencia BSD.
 - **[Django REST framework](https://www.django-rest-framework.org/)**: Es una herramienta potente y flexible para construir APIs web. Inlcuye una interfaz de usuario, politicas de autenticación y capacidad de personalización completa. Además cuenta con una extensa documentación y sólido respaldo de la comunidad. Actualmente es usado por empresas como: *Mozilla, Red Hat, Heroku* y *Eventbrite*.
 
-- **[Hug](https://hugapi.github.io/hug/)**: Tiene como objetivo desarrollar APIs impulsadas por Python de la forma más sencilla posible. Como resultado este framework prioriza la concisión, rapidez y la facilidad para realizar pruebas. Hug, busca ser la base para la siguiente generación de APIs.
+- **[Hug](https://hugapi.github.io/hug/)**: Tiene como objetivo desarrollar APIs impulsadas por Python de la forma más sencilla posible. Como resultado este framework prioriza la el lenguaje conciso, rapidez y la facilidad para realizar pruebas. Hug, busca ser la base para la siguiente generación de APIs.
 
 ## Elección del framework
 
