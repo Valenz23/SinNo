@@ -18,4 +18,5 @@ En esta sección se enlazarán los hitos de la asignatura junto con una breve de
  - **Hito 3** ([enlace](Hitos/Hito3/README.md)): Creación de un contenedor para pruebas.
  - **Hito 4** ([enlace](Hitos/Hito4/README.md)): Integración continua.
  - **Hito 5** ([enlace](Hitos/Hito5/README.md)): Diseño y test de un microservicio.
+ - **Hito 6** ([enlace](Hitos/Hito6/README.md)): Composición de servicios.
   
