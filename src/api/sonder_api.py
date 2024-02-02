@@ -1,20 +1,39 @@
 import hug # desde .. huf -f api/sonder_api.py
 import logging
-import random
-
 
 from clases.user import * 
 from clases.cancion import *
 
+import mysql.connector
+
 # configuracion de logging
 logging.basicConfig(filename='./logs/app.log', filemode='a', format='%(asctime)s - %(message)s', datefmt='%d-%m-%y %H:%M:%S', level=logging.INFO)
 
+def conectarDB():
+    conf = {
+        'host': 'mysql',
+        'user': 'myuser',
+        'password': 'secret',
+        'database': 'sonder'
+    }
+    conexion = mysql.connector.connect(**conf)
+    return conexion
+
 @hug.get('/status')
 def status():
-	mensaje = "Servicio disponible"
-	status = "OK"
-	logging.info(mensaje)
-	return { 
+
+    mensaje = ''
+
+    try:     
+        conexion_db = conectarDB()
+        mensaje = "Conexión a la base de datos establecida"
+    except mysql.connector.Error as err:
+        mensaje = f"Error de conexión a la base de datos: {err}"
+    
+    logging.info(mensaje)
+    status = "OK"
+
+    return { 
 		"mensaje":mensaje,
 		"status":status
     }
@@ -30,27 +49,33 @@ def not_found_handler():
     }
 
 @hug.get('/buscar')
-def api_buscar_cancion(atributo:str, valor:str):
-   
-    busqueda = buscarCancion(atributo,valor)
-    cancion = ""
-    status = ""
+def api_buscar_cancion(atributo: str, valor: str):
+#TODO
+    consulta = f'SELECT * FROM cancion WHERE {atributo} LIKE "%{valor}%"'
+    # consulta = f'SELECT * FROM cancion'
+    mensaje = 'Consulta: {}'.format(consulta)
+    resultado = ''
 
-    if busqueda:
-        mensaje = f"Encontrada cancion: campo: {atributo} | valor: {valor}"
+    try:
+        conexion_db = conectarDB()
+        with conexion_db.cursor() as cursor:
+            cursor.execute(consulta)
+            resultado = cursor.fetchall()
+
         logging.info(mensaje)
-        cancion = busqueda[0]
         status = "OK"
-    else:
-        mensaje = f"No se encontro ninguna cancion: campo: {atributo} | valor: {valor}"
-        logging.error(mensaje)
-        status = "Not Found"
 
-    return{
-        "message":mensaje,
-        "song":cancion,
-        "status":status
+    except Exception as e:
+        logging.error(f'Error en la consulta: {str(e)}')
+        resultado = None
+        status = "Error"
+
+    return {
+        "mensaje": mensaje,
+        "resultado": resultado,
+        "status": status
     }
+
 
 @hug.put('/add')
 def api_add_cancion(artista:str, titulo:str, letra:str):

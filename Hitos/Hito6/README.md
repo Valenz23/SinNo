@@ -9,6 +9,8 @@ En las ecciones siguientes, explicaremos los contenedores que vamos a usar y el 
 * Definición de la estructura de contenedores ([enlace](estructura.md)).
 * Configuración del contenedor de la BBDD ([enlace](confDB.md)).
 
+pip install mysql-connector-python
+
     
     2,5 puntos: documentación y justificación de la estructura del clúster.
     2,5 puntos: documentación y justificación de la configuración de cada uno de los contenedores que lo componen.

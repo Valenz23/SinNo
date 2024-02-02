@@ -1,0 +1,17 @@
+services:
+
+  mysql:
+    build: 
+      context: .
+      dockerfile: Dockerfile.mysql
+    ports: 
+      - "3306:3306"    
+
+  sonder:
+    build: 
+      context: .
+      dockerfile: Dockerfile.sonder
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
