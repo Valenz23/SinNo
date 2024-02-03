@@ -1,38 +1,6 @@
-# services:
-
-#   mysql:
-#     build: 
-#       context: .
-#       dockerfile: Dockerfile.mysql
-#     ports: 
-#       - "3306:3306"    
-
-#   sonder:
-#     build: 
-#       context: .
-#       dockerfile: Dockerfile.sonder
-#     ports:
-#       - "8000:8000"
-#     depends_on:
-#       - mysql
-#     volumes:
-#       - sonder-logs:/sonder/src/logs
-
-#   # logstash:
-#   #   build:
-#   #     context: .
-#   #     dockerfile: Dockerfile.logstash
-#   #   depends_on:
-#   #     - sonder
-#   #   volumes:
-#   #     - sonder-logs:/sonder/src/logs 
-
-# volumes:
-#   mysql-data:
-#   sonder-logs:
-
 services:
 
+  # mi base de datos
   mysql:
     image: mysql:latest
     ports:
@@ -47,7 +15,7 @@ services:
       - ./src/BBDD/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./src/BBDD/canciones2.csv:/var/lib/mysql-files/canciones2.csv
 
-
+  # la api que hemos diseñado
   sonder:
     build:
       context: .
@@ -58,15 +26,32 @@ services:
     volumes:
       - sonder-logs:/sonder/src/logs
       
+  # ELK -> para visualizar los logs
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.10.0
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
 
   logstash:
     image: docker.elastic.co/logstash/logstash:7.10.0
-    ports:
-      - "5000:5000"
+    command: ["logstash", "-f", "/usr/share/logstash/pipeline/logstash.conf"]
     volumes:
       - ./logstash-config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
       - sonder-logs:/sonder-logs
+    environment:
+      - ELASTICSEARCH_HOST=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
 
 volumes:
-  mysql-data:
-  sonder-logs:
+  mysql-data:     # para la base de datos
+  sonder-logs:    # para el fichero de logs

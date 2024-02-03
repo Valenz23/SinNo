@@ -10,6 +10,9 @@ En las ecciones siguientes, explicaremos los contenedores que vamos a usar y el 
 * Configuración de MySQL ([enlace](confDB.md)).
 * Configuración de ELK ([enlace](confELK.md))
 
+?????????????
+[![Watch the video](img/prueba.mkv)](img/prueba.mkv)
+
 pip install mysql-connector-python
 
     
