@@ -19,6 +19,7 @@ def conectarDB():
     conexion = mysql.connector.connect(**conf)
     return conexion
 
+# se prueba si la conexion a la base de datos es correcta
 @hug.get('/status')
 def status():
 
@@ -26,49 +27,42 @@ def status():
 
     try:     
         conexion_db = conectarDB()
-        mensaje = "Conexión a la base de datos establecida"
+        mensaje = "Conexión a la base de datos establecida"    
+        logging.info(mensaje)
+        status = "OK"
     except mysql.connector.Error as err:
-        mensaje = f"Error de conexión a la base de datos: {err}"
-    
-    logging.info(mensaje)
-    status = "OK"
+        mensaje = f"Error de conexión a la base de datos: {err}"    
+        logging.error(mensaje)
+        status = "Error"
 
     return { 
 		"mensaje":mensaje,
 		"status":status
     }
 
-@hug.not_found()
-def not_found_handler():
-	mensaje = "Servicio no encontrado"
-	status = "Not Found"
-	logging.error(mensaje)
-	return {
-		"mensaje":mensaje,
-		"status":status
-    }
-
+# busca la cancion
 @hug.get('/buscar')
 def api_buscar_cancion(atributo: str, valor: str):
-#TODO
+
     consulta = f'SELECT * FROM cancion WHERE {atributo} LIKE "%{valor}%"'
-    # consulta = f'SELECT * FROM cancion'
-    mensaje = 'Consulta: {}'.format(consulta)
+    mensaje = ''
+    status = ''
     resultado = ''
 
     try:
         conexion_db = conectarDB()
-        with conexion_db.cursor() as cursor:
+        with conexion_db.cursor() as cursor:            
+            mensaje = 'Consulta: {}'.format(consulta)
             cursor.execute(consulta)
             resultado = cursor.fetchall()
-
-        logging.info(mensaje)
         status = "OK"
+        logging.info(mensaje)
 
     except Exception as e:
-        logging.error(f'Error en la consulta: {str(e)}')
+        mensaje = f'Error en la consulta: {str(e)}'
         resultado = None
         status = "Error"
+        logging.error(mensaje)
 
     return {
         "mensaje": mensaje,

@@ -9,10 +9,6 @@ class TestSonderApi(unittest.TestCase):
         data = hug.test.get(api,'/status')
         self.assertEqual(data.status, hug.HTTP_200)
 
-    def test_api_not_found(self):
-        data = hug.test.get(api, '/error')
-        self.assertEqual(data.status, hug.HTTP_404)
-
     def test_api_buscar_cancion(self):
         data = hug.test.get(api,'/buscar', {'atributo':'artista','valor':'dragon'})
         self.assertEqual(data.status, hug.HTTP_200)

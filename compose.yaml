@@ -1,17 +1,72 @@
+# services:
+
+#   mysql:
+#     build: 
+#       context: .
+#       dockerfile: Dockerfile.mysql
+#     ports: 
+#       - "3306:3306"    
+
+#   sonder:
+#     build: 
+#       context: .
+#       dockerfile: Dockerfile.sonder
+#     ports:
+#       - "8000:8000"
+#     depends_on:
+#       - mysql
+#     volumes:
+#       - sonder-logs:/sonder/src/logs
+
+#   # logstash:
+#   #   build:
+#   #     context: .
+#   #     dockerfile: Dockerfile.logstash
+#   #   depends_on:
+#   #     - sonder
+#   #   volumes:
+#   #     - sonder-logs:/sonder/src/logs 
+
+# volumes:
+#   mysql-data:
+#   sonder-logs:
+
 services:
 
   mysql:
-    build: 
-      context: .
-      dockerfile: Dockerfile.mysql
-    ports: 
-      - "3306:3306"    
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sonder
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: secret
+    volumes:
+      - mysql-data:/var/lib/mysql     
+      - ./src/BBDD/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./src/BBDD/canciones2.csv:/var/lib/mysql-files/canciones2.csv
+
 
   sonder:
-    build: 
+    build:
       context: .
-      dockerfile: Dockerfile.sonder
     ports:
       - "8000:8000"
     depends_on:
       - mysql
+    volumes:
+      - sonder-logs:/sonder/src/logs
+      
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.10.0
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logstash-config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - sonder-logs:/sonder-logs
+
+volumes:
+  mysql-data:
+  sonder-logs:
