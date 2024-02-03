@@ -138,8 +138,8 @@ def api_add_lote(path:str):
             mensaje = f'Insertar lote: {path}'
 
             for fila in lector:
-                id, artista, titulo, letra, popularidad = fila
-                sql = f'INSERT INTO cancion (id, artista, titulo, letra, popularidad) VALUES ("{id}", "{artista}", "{titulo}", "{letra}", "{popularidad}")'    
+                artista, titulo, letra, popularidad = fila
+                sql = f'INSERT INTO cancion (artista, titulo, letra, popularidad) VALUES ("{artista}", "{titulo}", "{letra}", "{popularidad}")'    
                 mensaje += f' && {sql}'
                 cursor.execute(sql)  
         
@@ -160,7 +160,7 @@ def api_add_lote(path:str):
 @hug.get('/lista')
 def api_listar_canciones():
 
-    sql = f'SELECT * FROM cancion ORDER BY popularidad DESC '
+    sql = f'SELECT * FROM cancion ORDER BY popularidad DESC LIMIT 5'
     mensaje = ''
     status = ''
     resultado = ''
