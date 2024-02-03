@@ -1,4 +1,4 @@
-# Configuración del contenedor de la BBDD
+# Configuración de MySQL
 
 ## Prueba del Dockerfile
 

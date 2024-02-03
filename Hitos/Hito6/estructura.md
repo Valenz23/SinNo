@@ -12,7 +12,9 @@ Como puedo elegir libremente al estar creando la base de datos desde cero, el co
 
 ## Logs
 
-Nan
+Una opción popular para visualizar logs desde el navegador es *Elacticsearch*. Esta herramienta forma parte de **ELK** (*Elasticsearch*, *Logstash* y *Kibana*) y son ampliamente utilizadas para recopilar, almacenar y visualzizar logs.
+
+Esta opción no obliga a usar tres contenedores adicionales. Mediante **Logstash** leeremos los datos del fichero de log, y con **Kibana** podremos visualizarlos vía web.
 
 ## Estructura final de contenedores
 
@@ -20,7 +22,7 @@ La estructura de contenedores definida para mi proyecto es la siguiente:
 
 * **API**: Sonder
 * **BBDD**: MySQL
-* **Logs**: ...
+* **Logs**: ELK
 
 La orquestación esta documentada en su sección correspondiente.
 

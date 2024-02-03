@@ -7,7 +7,8 @@ En las ecciones siguientes, explicaremos los contenedores que vamos a usar y el 
 ## Índice
 
 * Definición de la estructura de contenedores ([enlace](estructura.md)).
-* Configuración del contenedor de la BBDD ([enlace](confDB.md)).
+* Configuración de MySQL ([enlace](confDB.md)).
+* Configuración de ELK ([enlace](confELK.md))
 
 pip install mysql-connector-python
 
