@@ -29,13 +29,12 @@ jobs:
 
       - name: Copy initialization script
         run: |
-          cp src/BBDD/init.sql docker-entrypoint-initdb.d/init.sql  
-          cp src/BBDD/canciones2.csv var/lib/mysql-files/canciones2.csv
+          cp src/BBDD/init.sql init.sql  
+          cp src/BBDD/canciones2.csv canciones2.csv
 
       - name: iniciar base de datos
         run: |
-          cd docker-entrypoint-initdb.d
-          mysql -h localhost -u myuser -psecret < init2.sql
+          mysql -h localhost -u myuser -psecret < init.sql
 
       - name: Sonder tests
         run: |
