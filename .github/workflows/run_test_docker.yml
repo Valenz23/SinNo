@@ -1,5 +1,5 @@
-# name: Run docker test 
-# run-name: ${{ github.actor }} is running docker tests 🚀
+name: Run docker test 
+run-name: ${{ github.actor }} is running docker tests 🚀
 # on: 
 #   push:
 #     paths:
@@ -15,7 +15,7 @@
 #           docker run -t -v `pwd`:/app/test pvalenz23/sonder:latest
 #           docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
 
-name: Run docker tests
+# name: Run docker tests
 on: 
   push:
     paths:

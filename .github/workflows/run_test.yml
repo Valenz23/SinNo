@@ -1,5 +1,5 @@
-# name: Run test 
-# run-name: ${{ github.actor }} is running tests 🚀
+name: Run test 
+run-name: ${{ github.actor }} is running tests 🚀
 # on: 
 #   push:
 #     paths:
@@ -22,15 +22,52 @@
 #         run: |
 #           cd src
 #           invoke test
+##################################################
+# name: Run tests with MySQL
+# on:
+#   push:
+#     paths:
+#       - 'src/**' 
 
-name: Run tests with MySQL
-on:
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     services:
+#       mysql:
+#         image: mysql:latest
+#         env:
+#           MYSQL_ROOT_PASSWORD: root
+#           MYSQL_DATABASE: sonder
+#           MYSQL_USER: myuser
+#           MYSQL_PASSWORD: secret
+#         ports:
+#           - "3306:3306"
+#     steps:
+#       - name: Check out repository code
+#         uses: actions/checkout@v4
+
+#       - name: Configure Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.10'
+
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install -r requirements.txt
+
+#       - name: Run tests
+#         run: |
+#           cd src
+#           invoke test
+
+on: 
   push:
     paths:
       - 'src/**' 
 
 jobs:
-  test:
+  docker-test:
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -42,23 +79,16 @@ jobs:
           MYSQL_PASSWORD: secret
         ports:
           - "3306:3306"
+      sonder:
+        image: pvalenz23/sonder:latest
+        ports:
+          - "8000:8000"
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Configure Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+      - name: Espera a que la base de datos esta iniciada
+        run: sleep 30  
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run tests
-        run: |
-          cd src
-          invoke test
-
-        
+      - name: Run Docker tests
+        run: docker exec sonder invoke test
