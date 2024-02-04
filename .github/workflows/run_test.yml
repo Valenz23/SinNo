@@ -26,9 +26,12 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4     
-        
-      - name: Copio el archivo de inicio de la BBDD
-        run: cp src/BBDD/init2.sql sonder/src
+
+      - name: Create sonder/src directory
+        run: mkdir -p sonder/src
+  
+      - name: Copy initialization script
+        run: cp src/BBDD/init2.sql sonder/src/init2.sql
 
       - name: iniciar base de datos
         run: |

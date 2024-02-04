@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXIST cancion (
     titulo VARCHAR(255),
     letra TEXT,
     popularidad DECIMAL(5, 2)
-);
+); 
