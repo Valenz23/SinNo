@@ -1,4 +1,7 @@
-CREATE TABLE cancion (
+CREATE DATABASE IF NOT EXIST sonder;
+USE sonder;
+
+CREATE TABLE IF NOT EXIST cancion (
     id INT PRIMARY KEY,
     artista VARCHAR(255),
     titulo VARCHAR(255),

@@ -25,10 +25,17 @@ jobs:
           - "8000:8000"
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4      
+        uses: actions/checkout@v4     
+        
+      - name: Copio el archivo de inicio de la BBDD
+        run: cp src/BBDD/init2.sql sonder/src/init2.sql
+
+      - name: iniciar base de datos
+        run: |
+          cd sonder/src
+          mysql -h localhost -u myuser -psecret < init2.sql
 
       - name: Sonder tests
         run: |
           cd sonder/src
-          mysql -h localhost -u myuser -psecret < BBDD/init2.sql
           invoke test
