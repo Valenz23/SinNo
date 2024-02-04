@@ -72,9 +72,9 @@ def api_buscar_cancion(atributo: str, valor: str):
 
 
 @hug.put('/add')
-def api_add_cancion(artista:str, titulo:str, letra:str):
+def api_add_cancion(id:int, artista:str, titulo:str, letra:str):
 
-    sql = f'INSERT INTO cancion (artista, titulo, letra, popularidad) VALUES ("{artista}", "{titulo}", "{letra}", 0)'    
+    sql = f'INSERT INTO cancion (id, artista, titulo, letra, popularidad) VALUES ("{id}", "{artista}", "{titulo}", "{letra}", 0)'    
     mensaje = ''
     status = ''
 
@@ -138,8 +138,8 @@ def api_add_lote(path:str):
             mensaje = f'Insertar lote: {path}'
 
             for fila in lector:
-                artista, titulo, letra, popularidad = fila
-                sql = f'INSERT INTO cancion (artista, titulo, letra, popularidad) VALUES ("{artista}", "{titulo}", "{letra}", "{popularidad}")'    
+                id, artista, titulo, letra, popularidad = fila
+                sql = f'INSERT INTO cancion (id, artista, titulo, letra, popularidad) VALUES ("{id}", "{artista}", "{titulo}", "{letra}", "{popularidad}")'    
                 mensaje += f' && {sql}'
                 cursor.execute(sql)  
         

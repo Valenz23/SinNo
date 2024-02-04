@@ -1,7 +1,7 @@
 
 -- Crea la tabla cancion
 CREATE TABLE cancion (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     artista VARCHAR(255),
     titulo VARCHAR(255),
     letra TEXT,
