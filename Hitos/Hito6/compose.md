@@ -24,11 +24,11 @@ Para la configuración usa otros dos volumenes que no son compartidos entre los 
 
 ## API
 
-La API corresponde a nuestro proyecto **Sonder**.
+La API corresponde al contenedor de nuestro proyecto **Sonder**.
 
 ![api1](img/compose/api1.png)
 
-Esta construida sobre el **[Dockerfile](../../Dockerfile)** definido en el hito anterior. Y usa el volumen en el que vuelca los logs.
+Usa el volumen en el que vuelca los logs.
 
 ## Logs
 
