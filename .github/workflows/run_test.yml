@@ -1,25 +1,36 @@
 name: Run test 
 run-name: ${{ github.actor }} is running tests 🚀
+
 on: 
   push:
     paths:
       - 'src/**' 
+
 jobs:
-  Test:
-    runs-on: ubuntu-22.04
-    steps:      
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: sonder
+          MYSQL_USER: myuser
+          MYSQL_PASSWORD: secret
+        ports:
+          - "3306:3306"
+      sonder:
+        image: pvalenz23/sonder:latest
+        ports:
+          - "8000:8000"
+    steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Configurando Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Instalando dependencias
+
+      - name: Espera a que la base de datos esta iniciada
+        run: sleep 30  
+
+      - name: Sonder tests
         run: |
-          python -m pip install --upgrade pip
-          pip install invoke hug pandas mysql-connector-python
-      - name: Ejecutar test
-        run: |
-          cd src
+          cd sonder/src
           invoke test
-        
