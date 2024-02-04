@@ -58,6 +58,4 @@ Ahora vamos a comprobar si se actualizan los logs con estas llamadas.
 
 Como se puede ver en las imágenes anteriores, las fechas (señaladas en rojo) coinciden con la hora a la que realizaron las llamadas a la API, es decir, somos capaces de visualizar los logs correctamente.
 
-Con esto, ya podemos dar por finalizado el hito 6 y el proyecto.
-
 [Volver](README.md)
