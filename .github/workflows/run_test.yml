@@ -25,17 +25,10 @@ jobs:
           - "8000:8000"
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4
-
-      - name: Espera a que la base de datos esta iniciada
-        run: sleep 10  
-      
-      - name: script de inicialización
-        run: |
-          mysql -h localhost -u myuser -psecret < src/BBDD/init2.sql
-      
+        uses: actions/checkout@v4      
 
       - name: Sonder tests
         run: |
           cd sonder/src
+          mysql -h localhost -u myuser -psecret < BBDD/init2.sql
           invoke test
