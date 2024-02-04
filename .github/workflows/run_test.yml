@@ -27,19 +27,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Iniciar base de datos
-        run: |
-          docker exec -i ${{ github.job }}-mysql-1 mysql -uroot -proot sonder <<-EOF
-            -- Crea la tabla cancion
-            CREATE TABLE cancion (
-                id INT PRIMARY KEY,
-                artista VARCHAR(255),
-                titulo VARCHAR(255),
-                letra TEXT,
-                popularidad DECIMAL(5, 2)
-            );
-          EOF
-
       - name: Espera a que la base de datos esta iniciada
         run: sleep 30  
 
