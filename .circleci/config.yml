@@ -21,7 +21,7 @@ jobs:
       - run:
           name: "Running tests in Docker container"
           command: |
-            docker run -t -v `pwd`:/app/test pvalenz23/sonder && \
+            docker run -t -v `pwd`:/app/test pvalenz23/sonder:latest && \
             docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
 
 workflows:

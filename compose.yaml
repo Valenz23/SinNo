@@ -17,8 +17,7 @@ services:
 
   # la api que hemos diseñado
   sonder:
-    build:
-      context: .
+    image: pvalenz23/sonder:latest
     ports:
       - "8000:8000"
     depends_on:
