@@ -28,11 +28,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Espera a que la base de datos esta iniciada
-        run: sleep 30  
+        run: sleep 10  
       
       - name: script de inicialización
         run: |
-          mysql -h localhost -u myuser -psecret < init2.sql
+          mysql -h localhost -u myuser -psecret < src/BBDD/init2.sql
       
 
       - name: Sonder tests
