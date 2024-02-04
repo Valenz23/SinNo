@@ -10,7 +10,7 @@ jobs:
           name: "Running tests"
           command: |
             pip install --upgrade pip
-            pip install invoke hug pandas
+            pip install invoke hug pandas mysql-connector-python
             cd src && invoke test
 
   docker-tests:

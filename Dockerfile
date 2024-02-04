@@ -4,8 +4,11 @@ FROM python:3.8-slim
 # Instalo las dependencias necesarias
 RUN apt-get update
 
-# Instalo las dependencias de la aplicación
-RUN pip install hug invoke pandas
+# Copio el archivo requirements.txt
+COPY requirements.txt requirements.txt
+
+# Instalo las dependencias desde requirements.txt
+RUN pip install -r requirements.txt
 
 # Configuro el directorio de trabajo
 WORKDIR /sonder/src
@@ -14,5 +17,6 @@ WORKDIR /sonder/src
 COPY src /sonder/src
 
 # Establezco el comando por defecto para ejecutar los tests y activar la API
-# CMD ["sh", "-c", "invoke test && hug -f api/sonder_api.py"]
-CMD ["sh", "-c", "invoke test"]
+# hemos metido una espera de 30 segundos para dar tiempo a MySQL de iniciar su servicio
+# CMD ["sh", "-c", "sleep 30 && invoke test && hug -f api/sonder_api.py"]
+CMD ["sh", "-c", "hug -f api/sonder_api.py"]

@@ -1,0 +1,4 @@
+hug
+invoke
+pandas
+mysql-connector-python

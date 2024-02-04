@@ -1,4 +1,4 @@
-# Hito 5: Diseño y test de un microservicio.
+# **Hito 5**: Diseño y test de un microservicio.
 
 Para la realización del hito 5 debemos crear un microservicio (API Rest) sobre la base de la funcionalidad del hito anterior, cumpliendo los requisitos de las historias de usuario.
 

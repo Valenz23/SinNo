@@ -1,4 +1,4 @@
-# Hito 3: Creación de un contenedor para pruebas.
+# **Hito 3**: Creación de un contenedor para pruebas.
  
 ## Índice
 1. Elección del contenedor base ([enlace](contenedorBase.md))

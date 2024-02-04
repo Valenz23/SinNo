@@ -1,4 +1,4 @@
-# Hito 4: Integración continua.
+# **Hito 4**: Integración continua.
 
 En este hito vamos a añadir integración continua (CI) a nuestro proyecto. Esta técnica se usa para automatizar tareas que son realizadas frecuentemente, en nuestro caso, los test, y también, para detectar y solucionar problemas de manera temprana.
 

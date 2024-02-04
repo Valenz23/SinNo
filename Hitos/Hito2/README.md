@@ -1,4 +1,4 @@
-# Hito 2: Tests
+# **Hito 2**: Tests
 
 Índice de los documentos del hito 2:
 - Elección y configuración del gestor de tareas ([enlace](gestorTareas.md))
