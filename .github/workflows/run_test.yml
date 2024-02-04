@@ -40,8 +40,8 @@ jobs:
             );
           EOF
 
-      # - name: Espera a que la base de datos esta iniciada
-      #   run: sleep 30  
+      - name: Espera a que la base de datos esta iniciada
+        run: sleep 30  
 
       - name: Sonder tests
         run: |
