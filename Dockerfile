@@ -17,4 +17,4 @@ WORKDIR /sonder/src
 COPY src /sonder/src
 
 # Establezco el comando por defecto para ejecutar los tests
-CMD ["sh", "-c", "invoke test"]
+CMD ["sh", "-c", "invoke test"]   
