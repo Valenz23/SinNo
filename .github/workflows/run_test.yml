@@ -90,5 +90,7 @@ jobs:
       - name: Espera a que la base de datos esta iniciada
         run: sleep 5  
 
-    #   - name: Run Docker tests
-    #     run: docker exec sonder invoke test
+      - name: Sonder tests
+        run: |
+          cd src
+          invoke test
