@@ -27,15 +27,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4     
 
-      - name: Create sonder/src directory
-        run: mkdir -p sonder/src
-  
       - name: Copy initialization script
-        run: cp src/BBDD/init2.sql sonder/src/init2.sql
+        run: |
+          cp src/BBDD/init.sql docker-entrypoint-initdb.d/init.sql  
+          cp src/BBDD/canciones2.csv var/lib/mysql-files/canciones2.csv
 
       - name: iniciar base de datos
         run: |
-          cd sonder/src
+          cd docker-entrypoint-initdb.d
           mysql -h localhost -u myuser -psecret < init2.sql
 
       - name: Sonder tests

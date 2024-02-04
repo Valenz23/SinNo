@@ -13,4 +13,4 @@ LOAD DATA INFILE '/var/lib/mysql-files/canciones2.csv'
 INTO TABLE cancion
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
-LINES TERMINATED BY '\n';
+LINES TERMINATED BY '\n'; 
