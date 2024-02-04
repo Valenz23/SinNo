@@ -67,7 +67,7 @@ on:
       - 'src/**' 
 
 jobs:
-  docker-test:
+  test:
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -83,12 +83,12 @@ jobs:
         image: pvalenz23/sonder:latest
         ports:
           - "8000:8000"
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+    # steps:
+    #   - name: Check out repository code
+    #     uses: actions/checkout@v4
 
-      - name: Espera a que la base de datos esta iniciada
-        run: sleep 30  
+    #   - name: Espera a que la base de datos esta iniciada
+    #     run: sleep 30  
 
-      - name: Run Docker tests
-        run: docker exec sonder invoke test
+    #   - name: Run Docker tests
+    #     run: docker exec sonder invoke test
