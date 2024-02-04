@@ -16,8 +16,5 @@ WORKDIR /sonder/src
 # Copio los archivos de tu aplicación
 COPY src /sonder/src
 
-# Establezco el comando por defecto para ejecutar los tests y activar la API
-# hemos metido una espera de 30 segundos para dar tiempo a MySQL de iniciar su servicio
-# CMD ["sh", "-c", "sleep 30 && invoke test && hug -f api/sonder_api.py"]
-# CMD ["sh", "-c", "hug -f api/sonder_api.py"]
-CMD ["sh", "-c", "sleep 30 && invoke test"]
+# Establezco el comando por defecto para ejecutar los tests
+CMD ["sh", "-c", "invoke test"]
