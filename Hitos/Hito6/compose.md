@@ -4,6 +4,8 @@ En total, mi el fichero **[compose.yaml](../../compose.yaml)** consta de cinco c
 
 A continuación vamos a describir la estructura del fichero, parándonos en cada uno.
 
+**NOTA**: vamos a aprovechar el conocimiento adquirido en las secciones anteriores respecto a los contendores *MySQL* y *ELK*.
+
 ## Base de datos
 
 La base de datos esta construida sobre una imagen **MySQL**.

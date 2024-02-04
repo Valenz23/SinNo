@@ -14,7 +14,7 @@ Como puedo elegir libremente al estar creando la base de datos desde cero, el co
 
 Una opción popular para visualizar logs desde el navegador es *Elacticsearch*. Esta herramienta forma parte de **ELK** (*Elasticsearch*, *Logstash* y *Kibana*) y son ampliamente utilizadas para recopilar, almacenar y visualzizar logs.
 
-Esta opción no obliga a usar tres contenedores adicionales. Mediante **Logstash** leeremos los datos del fichero de log, y con **Kibana** podremos visualizarlos vía web.
+Esta opción nos obliga a usar tres contenedores adicionales. Mediante **Logstash** leeremos los datos del fichero de log, y con **Kibana** podremos visualizarlos vía web.
 
 ## Estructura final de contenedores
 
