@@ -8,20 +8,10 @@ En las ecciones siguientes, explicaremos los contenedores que vamos a usar y el 
 
 * Definición de la estructura de contenedores ([enlace](estructura.md)).
 * Configuración de MySQL ([enlace](confDB.md)).
-* Configuración de ELK ([enlace](confELK.md))
-
-?????????????
-[![Watch the video](img/prueba.mkv)](img/prueba.mkv)
-
-pip install mysql-connector-python
-
-    
-    2,5 puntos: documentación y justificación de la estructura del clúster.
-    2,5 puntos: documentación y justificación de la configuración de cada uno de los contenedores que lo componen.
-    2,5 puntos: documentación del fichero de composición.
-    2,5 puntos: testeo del cúster.
-    [OPCIONAL] + 2 puntos extra: pruebas de velocidad del cúster, grado de terminación del proyecto, despliegue a algún servicio cloud.
-
+* Configuración de ELK ([enlace](confELK.md)).
+* Cambios en la API ([enlace](confAPI.md)).
+* Composición del servicio ([enlace](compose.md)).
+* Prueba de la API y visualización de logs ([enlace](testAPI.md)).
 
 
 [Ir a inicio](../../README.md)

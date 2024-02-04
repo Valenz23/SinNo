@@ -11,9 +11,9 @@ services:
       MYSQL_USER: myuser
       MYSQL_PASSWORD: secret
     volumes:
-      - mysql-data:/var/lib/mysql     
-      - ./src/BBDD/init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./src/BBDD/canciones2.csv:/var/lib/mysql-files/canciones2.csv
+      - mysql-data:/var/lib/mysql                                             # persistencia de base de datos
+      - ./src/BBDD/init.sql:/docker-entrypoint-initdb.d/init.sql              # copy configuracion de la DB
+      - ./src/BBDD/canciones2.csv:/var/lib/mysql-files/canciones2.csv         # datos iniciales de la DB
 
   # la api que hemos diseñado
   sonder:
@@ -24,7 +24,7 @@ services:
     depends_on:
       - mysql
     volumes:
-      - sonder-logs:/sonder/src/logs
+      - sonder-logs:/sonder/src/logs                                          # persistencia de los logs
       
   # ELK -> para visualizar los logs
   elasticsearch:
@@ -45,8 +45,8 @@ services:
     image: docker.elastic.co/logstash/logstash:7.10.0
     command: ["logstash", "-f", "/usr/share/logstash/pipeline/logstash.conf"]
     volumes:
-      - ./logstash-config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-      - sonder-logs:/sonder-logs
+      - ./logstash-config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf    # configuracion
+      - sonder-logs:/sonder-logs                                                      # uso del volumen de logs
     environment:
       - ELASTICSEARCH_HOST=http://elasticsearch:9200
     depends_on:
