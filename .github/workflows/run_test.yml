@@ -34,7 +34,7 @@ jobs:
 
       - name: iniciar base de datos
         run: |
-          mysql -h localhost -u myuser -psecret < init.sql
+          mysql -h localhost -u myuser --password=secret < init.sql
 
       - name: Sonder tests
         run: |
