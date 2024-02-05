@@ -17,12 +17,9 @@ jobs:
       - run:
           name: Build and deploy Docker Compose
           command: |
-            docker-compose up -d
+            sudo /usr/local/bin/docker-compose up -d
 
 workflows:
   tests:
     jobs:
       - deploy
-
-
-
