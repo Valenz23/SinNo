@@ -9,7 +9,7 @@ jobs:
       - mysql
 
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_HOST: mysql
       MYSQL_DATABASE: sonder
       MYSQL_USER: myuser
       MYSQL_PASSWORD: secret
