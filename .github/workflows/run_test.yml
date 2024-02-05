@@ -1,10 +1,10 @@
-name: Run test 
-run-name: ${{ github.actor }} is running tests 🚀
+name: Ejecutar test de repositorio
+run-name: ${{ github.actor }} esta ejecutando test en el repositorio 🚀
 
 on: 
   push:
-    paths:
-      - 'src/**' 
+    # paths:
+    #   - 'src/**' 
 
 jobs:
   test:
@@ -19,24 +19,16 @@ jobs:
           MYSQL_PASSWORD: secret
         ports:
           - "3306:3306"
-      sonder:
-        image: pvalenz23/sonder:latest
-        ports:
-          - "8000:8000"
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4     
-
-      - name: Copy initialization script
+      - name: Copia del repositorio
+        uses: actions/checkout@v4 
+        
+      - name: Instalando dependencias
         run: |
-          cp src/BBDD/init.sql init.sql  
-          cp src/BBDD/canciones2.csv canciones2.csv
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: iniciar base de datos
-        run: |
-          mysql -h localhost -u myuser --password=secret < init.sql
-
-      - name: Sonder tests
+      - name: Ejecutando tests de repositorio
         run: |
           cd sonder/src
           invoke test
