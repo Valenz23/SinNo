@@ -14,9 +14,9 @@ jobs:
             docker-compose up -d
 
 workflows:
-  deploy:
+  tests:
     jobs:
-      -deploy
+      - deploy
 
 
 
