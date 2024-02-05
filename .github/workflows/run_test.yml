@@ -14,6 +14,7 @@ jobs:
         image: mysql:latest
         env:
           MYSQL_HOST: mysql
+          MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: sonder
           MYSQL_USER: myuser
           MYSQL_PASSWORD: secret
