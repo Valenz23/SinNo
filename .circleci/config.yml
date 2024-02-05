@@ -1,10 +1,8 @@
-version: 2.1
-
 jobs:
-  build:
-    docker:
-      - image: cimg/base:current       
-    resource_class: xlarge
+  deploy:
+    machine:
+      image: ubuntu-2004:202104-01
+      docker_layer_caching: true   
 
     steps:
       - checkout
@@ -13,3 +11,7 @@ jobs:
           name: Build and deploy Docker Compose
           command: |
             docker-compose up -d
+workflows:
+  deploy:
+    jobs:
+      - deploy
