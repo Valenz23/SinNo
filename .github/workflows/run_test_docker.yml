@@ -24,6 +24,9 @@ jobs:
       - name: Copia del repositorio
         uses: actions/checkout@v4
 
+      - name: Esperar a que MySQL esté disponible
+        run: sleep 30s
+
       - name: Run docker test
         run: |
           docker run -t -v $(pwd):/app/test pvalenz23/sonder:latest

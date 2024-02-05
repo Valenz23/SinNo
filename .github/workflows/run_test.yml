@@ -29,6 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Esperar a que MySQL esté disponible
+        run: sleep 30s
+        
+
       - name: Ejecutando tests de repositorio
         run: |
           cd src

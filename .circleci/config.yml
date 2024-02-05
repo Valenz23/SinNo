@@ -17,6 +17,11 @@ jobs:
 
     steps:
       - checkout
+      
+      - run: Esperar a que MySQL esté disponible
+        comand: |
+          sleep 30s
+
       - run:
           name: "Ejecutando test en el repositorio"
           command: |
@@ -32,10 +37,18 @@ jobs:
       - mysql
 
     environment:
+      MYSQL_HOST: mysql
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: sonder
       MYSQL_USER: myuser
       MYSQL_PASSWORD: secret
+
+    steps:
+      - checkout
+      
+      - run: Esperar a que MySQL esté disponible
+        comand: |
+          sleep 30s
 
     steps:
       - checkout
