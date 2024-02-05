@@ -9,7 +9,7 @@ CREATE TABLE cancion (
 );
 
 -- Inserta los datos desde el CSV
-LOAD DATA INFILE '/var/lib/mysql-files/canciones2.csv ' 
+LOAD DATA INFILE '/var/lib/mysql-files/canciones2.csv '
 INTO TABLE cancion
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
