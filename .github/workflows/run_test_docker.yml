@@ -1,25 +1,10 @@
-name: Run docker test 
-run-name: ${{ github.actor }} is running docker tests 🚀
-# on: 
-#   push:
-#     paths:
-#       - 'src/**' 
-# jobs:
-#   Docker-Test:
-#     runs-on: ubuntu-latest    
-#     steps:      
-#       - name: Check out repository code
-#         uses: actions/checkout@v4      
-#       - name: Ejecutar docker test
-#         run: |
-#           docker run -t -v `pwd`:/app/test pvalenz23/sonder:latest
-#           docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
+name: Ejecutar tes de contenedores
+run-name: ${{ github.actor }} esta ejecutando test en los contenedores 🚀
 
-# name: Run docker tests
 on: 
   push:
-    paths:
-      - 'src/**' 
+    # paths:
+    #   - 'src/**' 
 
 jobs:
   docker-test:
@@ -28,6 +13,7 @@ jobs:
       mysql:
         image: mysql:latest
         env:
+          MYSQL_HOST: mysql
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: sonder
           MYSQL_USER: myuser
@@ -35,8 +21,11 @@ jobs:
         ports:
           - "3306:3306"
     steps:
-      - name: Check out repository code
+      - name: Copia del repositorio
         uses: actions/checkout@v4
+
+      - name: Esperar a que MySQL esté disponible
+        run: sleep 30s
 
       - name: Run docker test
         run: |

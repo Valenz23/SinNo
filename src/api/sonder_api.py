@@ -28,6 +28,10 @@ def status():
 
     try:     
         conexion_db = conectarDB()
+        sql = "CREATE TABLE IF NOT EXISTS cancion (id INT PRIMARY KEY, artista VARCHAR(255), titulo VARCHAR(255), letra TEXT, popularidad DECIMAL(5, 2))";        
+        with conexion_db.cursor() as cursor:
+            cursor.execute(sql)
+        conexion_db.commit()          
         mensaje = "Conexión a la base de datos establecida."    
         logging.info(mensaje)
         status = "OK"
