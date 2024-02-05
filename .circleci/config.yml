@@ -1,10 +1,9 @@
 version: 2.1
 
 jobs:
-  deploy:
-    machine:
-      image: ubuntu:latest
-      docker_layer_caching: true   
+  build:
+    docker:
+      - image: cimg/base:current   
 
     steps:
       - checkout
@@ -13,11 +12,3 @@ jobs:
           name: Build and deploy Docker Compose
           command: |
             docker-compose up -d
-
-workflows:
-  deploy:
-    jobs:
-      - deploy
-
-
-
