@@ -24,4 +24,8 @@ Si nos dirigimos a la sección de acciones del [repositorio](https://github.com/
 
 Las fotos anteriores muestran la ejecución exitosa del ultimo test realizado.
 
+En el entorno de [circleCI](https://app.circleci.com/pipelines/circleci/RbSHdQaX63s4AwV2C5Akhp) también funcionan los test.
+
+![ci5](img/ci/ci5.png)
+
 [Volver](README.md)
