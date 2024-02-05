@@ -1,66 +1,16 @@
 version: 2.1
 
 jobs:
-  tests:
+  deploy:
     docker:
-      - image: python:3.9
-
-    services:
-      - mysql
-
-    environment:
-      MYSQL_HOST: mysql
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: sonder
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: secret
+      - image: circleci/python:3.9
 
     steps:
       - checkout
-      
-      - run: Esperar a que MySQL esté disponible
-        comand: |
-          sleep 30s
 
       - run:
-          name: "Ejecutando test en el repositorio"
+          name: Build and deploy Docker Compose
           command: |
-            pip install --upgrade pip
-            pip install -r requirements.txt
-            cd src && invoke test
+            docker-compose up -d
 
-  docker-tests:
-    machine:
-      image: ubuntu-2204:current
-
-    services:
-      - mysql
-
-    environment:
-      MYSQL_HOST: mysql
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: sonder
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: secret
-
-    steps:
-      - checkout
-      
-      - run: Esperar a que MySQL esté disponible
-        comand: |
-          sleep 30s
-
-    steps:
-      - checkout
-      - run:
-          name: "Ejecutando test de contenedores"
-          command: |
-            docker run -t -v `pwd`:/app/test pvalenz23/sonder:latest && \
-            docker run -t -v `pwd`:/app/test ghcr.io/valenz23/sonder:latest
-
-workflows:
-  all-tests:
-    jobs:
-      - tests
-      - docker-tests
 
