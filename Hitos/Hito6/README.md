@@ -12,6 +12,7 @@ En las secciones siguientes, explicaremos los contenedores que vamos a usar y el
 * Cambios en la API ([enlace](confAPI.md)).
 * Composición del servicio ([enlace](compose.md)).
 * Prueba de la API y visualización de logs ([enlace](testAPI.md)).
+* Modificación de test CI ([enlace](testCI.md)).
 
 
 [Ir a inicio](../../README.md)
